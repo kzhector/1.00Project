@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a709288e8f44cceda62852d04287bfa0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a709288e8f44cceda62852d04287bfa0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a709288e8f44cceda62852d04287bfa0 = L.map(
+                "map_a709288e8f44cceda62852d04287bfa0",
+                {
+                    center: [42.0, -102.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4.4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8fc476b33df03985547042b01d685d3b = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+            var marker_de9070e963d4014a8c0b31861cac2fd3 = L.marker(
+                [35.87361111, -118.45805556],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_e16e0cb5fbdc83c523aefd92aaa94086 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb1488abf64a440b4aedbfff0640e29f = $(`<div id="html_cb1488abf64a440b4aedbfff0640e29f" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-07-21</td>           <td style='border: 1px solid'>152417</td>           <td style='border: 1px solid'>150696.0</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Actinemys marmorata', 'Ambystoma macrodactylum', 'Anas penelope', 'Anaxyrus boreas', 'Aneides flavipunctatus', 'Aneides lugubris', 'Anniella pulchra', 'Anthocharis sara']</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Actinemys marmorata', 'Ambystoma macrodactylum', 'Anas penelope', 'Anaxyrus boreas', 'Aneides flavipunctatus', 'Aneides lugubris', 'Anniella pulchra', 'Anthocharis sara']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_e16e0cb5fbdc83c523aefd92aaa94086.setContent(html_cb1488abf64a440b4aedbfff0640e29f);
+            
+        
+
+        marker_de9070e963d4014a8c0b31861cac2fd3.bindPopup(popup_e16e0cb5fbdc83c523aefd92aaa94086)
+        ;
+
+        
+    
+    
+            var marker_329e423199c662bb25cd0f10aa5a142b = L.marker(
+                [42.03888889, -123.91166667],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_849483182282fb088adf4cf251ebe2f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb6c93150cb471f38527a6574f57afc9 = $(`<div id="html_cb6c93150cb471f38527a6574f57afc9" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-07-13</td>           <td style='border: 1px solid'>153706</td>           <td style='border: 1px solid'>499945.0</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Actinemys marmorata', 'Alces alces', 'Alectoris chukar', 'Ambystoma macrodactylum', 'Anas cyanoptera', 'Anas penelope', 'Anaxyrus boreas', 'Aneides flavipunctatus']</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Actinemys marmorata', 'Alces alces', 'Alectoris chukar', 'Ambystoma macrodactylum', 'Anas cyanoptera', 'Anas penelope', 'Anaxyrus boreas', 'Aneides flavipunctatus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_849483182282fb088adf4cf251ebe2f5.setContent(html_cb6c93150cb471f38527a6574f57afc9);
+            
+        
+
+        marker_329e423199c662bb25cd0f10aa5a142b.bindPopup(popup_849483182282fb088adf4cf251ebe2f5)
+        ;
+
+        
+    
+    
+            var marker_5012fe7f136f2767259fb58d8391d08a = L.marker(
+                [39.0575, -105.40833333],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_5400a3480434c7d2ad9e9f368816cfa8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a3d8c09d47782ab90cfa5dfeb574f4f = $(`<div id="html_0a3d8c09d47782ab90cfa5dfeb574f4f" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-06-08</td>           <td style='border: 1px solid'>154400</td>           <td style='border: 1px solid'>137760.0</td>           <td style='border: 1px solid'>['Amphispiza bilineata', 'Callipepla squamata', 'Corvus corax', 'Crotalus viridis', 'Crotaphytus collaris', 'Glaucopsyche lygdamus', 'Incisalia eryphon', 'Lanius ludovicianus', 'Lynx rufus']</td>           <td style='border: 1px solid'>['Amphispiza bilineata', 'Callipepla squamata', 'Corvus corax', 'Crotalus viridis', 'Crotaphytus collaris', 'Glaucopsyche lygdamus', 'Incisalia eryphon', 'Lanius ludovicianus', 'Lynx rufus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_5400a3480434c7d2ad9e9f368816cfa8.setContent(html_0a3d8c09d47782ab90cfa5dfeb574f4f);
+            
+        
+
+        marker_5012fe7f136f2767259fb58d8391d08a.bindPopup(popup_5400a3480434c7d2ad9e9f368816cfa8)
+        ;
+
+        
+    
+    
+            var marker_ee4833bb27733f5f0fd49448a150025b = L.marker(
+                [34.23027778, -117.7875],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_ae746cf6b7dd2d7ddb87921512f5b762 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c231057150d1609ed1d8a491cf1a7952 = $(`<div id="html_c231057150d1609ed1d8a491cf1a7952" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-09-22</td>           <td style='border: 1px solid'>154632</td>           <td style='border: 1px solid'>37240.0</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Anaxyrus boreas', 'Aphonopelma eutylenum', 'Apis mellifera', 'Ardea herodias', 'Cathartes aura', 'Egretta thula', 'Larus heermanni', 'Loxorhynchus grandis']</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Anaxyrus boreas', 'Aphonopelma eutylenum', 'Apis mellifera', 'Ardea herodias', 'Cathartes aura', 'Egretta thula', 'Larus heermanni', 'Loxorhynchus grandis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_ae746cf6b7dd2d7ddb87921512f5b762.setContent(html_c231057150d1609ed1d8a491cf1a7952);
+            
+        
+
+        marker_ee4833bb27733f5f0fd49448a150025b.bindPopup(popup_ae746cf6b7dd2d7ddb87921512f5b762)
+        ;
+
+        
+    
+    
+            var marker_b4e9fd15c13cacffea3f62269b2cef65 = L.marker(
+                [34.1084, -110.4859],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_0edd41ee1442fb66a3c57f04b9cec480 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b326991f9612547ed2b23e6e33b0094d = $(`<div id="html_b326991f9612547ed2b23e6e33b0094d" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-06-18</td>           <td style='border: 1px solid'>297292</td>           <td style='border: 1px solid'>259158.9</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Aspidoscelis tesselatus', 'Chamaea fasciata', 'Crotalus ruber', 'Geococcyx californianus', 'Gopherus agassizii', 'Haemorhous mexicanus', 'Lynx rufus', 'Meleagris gallopavo']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Aspidoscelis tesselatus', 'Chamaea fasciata', 'Crotalus ruber', 'Geococcyx californianus', 'Gopherus agassizii', 'Haemorhous mexicanus', 'Lynx rufus', 'Meleagris gallopavo']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_0edd41ee1442fb66a3c57f04b9cec480.setContent(html_b326991f9612547ed2b23e6e33b0094d);
+            
+        
+
+        marker_b4e9fd15c13cacffea3f62269b2cef65.bindPopup(popup_0edd41ee1442fb66a3c57f04b9cec480)
+        ;
+
+        
+    
+    
+            var marker_a893d7a074288a5c0f8923d2f23e6ee4 = L.marker(
+                [34.1362, -110.7029],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_79764d3e83d2eca02f3426ae7b352802 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0dda5f4a4fa59ba27d1fb7925ad5ff40 = $(`<div id="html_0dda5f4a4fa59ba27d1fb7925ad5ff40" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-06-20</td>           <td style='border: 1px solid'>297293</td>           <td style='border: 1px solid'>209704.1</td>           <td style='border: 1px solid'>['Aspidoscelis tesselatus', 'Meleagris gallopavo', 'Odocoileus hemionus', 'Orthoporus ornatus', 'Pecari tajacu', 'Pheucticus ludovicianus', 'Phrynosoma cornutum', 'Zenaida asiatica']</td>           <td style='border: 1px solid'>['Aspidoscelis tesselatus', 'Meleagris gallopavo', 'Odocoileus hemionus', 'Orthoporus ornatus', 'Pecari tajacu', 'Pheucticus ludovicianus', 'Phrynosoma cornutum', 'Zenaida asiatica']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_79764d3e83d2eca02f3426ae7b352802.setContent(html_0dda5f4a4fa59ba27d1fb7925ad5ff40);
+            
+        
+
+        marker_a893d7a074288a5c0f8923d2f23e6ee4.bindPopup(popup_79764d3e83d2eca02f3426ae7b352802)
+        ;
+
+        
+    
+    
+            var marker_51193ffc697768e5a552b1e3ed900906 = L.marker(
+                [30.6688889, -82.2936111],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_edba1803c5d5f27cb0284d1387b40f69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ff1b6d0e875a615f4e31d6c02225e78 = $(`<div id="html_9ff1b6d0e875a615f4e31d6c02225e78" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-05-03</td>           <td style='border: 1px solid'>365948</td>           <td style='border: 1px solid'>124110.0</td>           <td style='border: 1px solid'>['Acris gryllus', 'Alligator mississippiensis', 'Anas platyrhynchos', 'Anhinga anhinga', 'Anolis carolinensis', 'Anolis sagrei', 'Cemophora coccinea', 'Chelydra serpentina', 'Coluber constrictor']</td>           <td style='border: 1px solid'>['Acris gryllus', 'Alligator mississippiensis', 'Anas platyrhynchos', 'Anhinga anhinga', 'Anolis carolinensis', 'Anolis sagrei', 'Cemophora coccinea', 'Chelydra serpentina', 'Coluber constrictor']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_edba1803c5d5f27cb0284d1387b40f69.setContent(html_9ff1b6d0e875a615f4e31d6c02225e78);
+            
+        
+
+        marker_51193ffc697768e5a552b1e3ed900906.bindPopup(popup_edba1803c5d5f27cb0284d1387b40f69)
+        ;
+
+        
+    
+    
+            var marker_d0d7cc32320628d84fe1fb613bd04c9c = L.marker(
+                [33.1025, -116.57361111],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_f8b675be01da24740556efb011e0192f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba687eb83b1a841a132b463ea0eb0c1a = $(`<div id="html_ba687eb83b1a841a132b463ea0eb0c1a" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-07-29</td>           <td style='border: 1px solid'>1061327</td>           <td style='border: 1px solid'>61690.0</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Anaxyrus boreas', 'Anniella stebbinsi', 'Anthocharis sara', 'Aphonopelma eutylenum', 'Batrachoseps major', 'Bombus californicus', 'Calypte anna', 'Campylorhynchus brunneicapillus']</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Anaxyrus boreas', 'Anniella stebbinsi', 'Anthocharis sara', 'Aphonopelma eutylenum', 'Batrachoseps major', 'Bombus californicus', 'Calypte anna', 'Campylorhynchus brunneicapillus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f8b675be01da24740556efb011e0192f.setContent(html_ba687eb83b1a841a132b463ea0eb0c1a);
+            
+        
+
+        marker_d0d7cc32320628d84fe1fb613bd04c9c.bindPopup(popup_f8b675be01da24740556efb011e0192f)
+        ;
+
+        
+    
+    
+            var marker_ac8e7c1589edf18e67a3036d1f44a47b = L.marker(
+                [34.48111111, -118.55277778],
+                {}
+            ).addTo(map_a709288e8f44cceda62852d04287bfa0);
+        
+    
+        var popup_def5006e938be15069dc08d6e9b7b7d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e1624ed6129ec6cff69bdd089d9369d = $(`<div id="html_1e1624ed6129ec6cff69bdd089d9369d" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2002-06-05</td>           <td style='border: 1px solid'>1061467</td>           <td style='border: 1px solid'>23407.0</td>           <td style='border: 1px solid'>['Apis mellifera', 'Ardea herodias', 'Cathartes aura', 'Egretta thula', 'Gymnogyps californianus', 'Larus heermanni', 'Loxorhynchus grandis', 'Sceloporus occidentalis']</td>           <td style='border: 1px solid'>['Apis mellifera', 'Ardea herodias', 'Cathartes aura', 'Egretta thula', 'Gymnogyps californianus', 'Larus heermanni', 'Loxorhynchus grandis', 'Sceloporus occidentalis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_def5006e938be15069dc08d6e9b7b7d6.setContent(html_1e1624ed6129ec6cff69bdd089d9369d);
+            
+        
+
+        marker_ac8e7c1589edf18e67a3036d1f44a47b.bindPopup(popup_def5006e938be15069dc08d6e9b7b7d6)
+        ;
+
+        
+    
+</script>
+</html>

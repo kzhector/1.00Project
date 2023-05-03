@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+<title>1.00 Project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.column {
+  float: left;
+  padding: 14px 16px;
+  background-color:rgb(134, 215, 223);
+  text-align: center;
+}
+
+/* Left and right column */
+.column.side {
+  width: 100%;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Wildfires and Biodiversity</h1>
+    <p>A Brief Study of the Impact of Wildfires on Biodiversity in the United States</p>
+</div>
+
+<div class="topnav">
+    <a href="/temporal">Temporal</a>
+    <a href="/1992">1992</a>
+    <a href="/1993">1993</a>
+    <a href="/1994">1994</a>
+    <a href="/1995">1995</a>
+    <a href="/1996">1996</a>
+    <a href="/1997">1997</a>
+    <a href="/1998">1998</a>
+    <a href="/1999">1999</a>
+    <a href="/2000">2000</a>
+    <a href="/2001">2001</a>
+    <a href="/2002">2002</a>
+    <a href="/2003">2003</a>
+    <a href="/2004">2004</a>
+    <a href="/2005">2005</a>
+    <a href="/2006">2006</a>
+    <a href="/2007">2007</a>
+    <a href="/2008">2008</a>
+    <a href="/2009">2009</a>
+    <a href="/2010">2010</a>
+    <a href="/2011">2011</a>
+    <a href="/2012">2012</a>
+    <a href="/2013">2013</a>
+    <a href="/2014">2014</a>
+    <a href="/2015">2015</a>
+</div>
+
+<div class="row">
+<div class="column side">
+    <h2>Introduction</h2>
+    <p>The purpose of this project was to develop a better understanding of how a wildfire impacts the biodiversity
+        of an area. The data used in this project was from the Global Biodiversity Information Facility (GBIF) and the fire data is from a kaggle database.
+        From this data I found that wildfires had no impact on the biodiversity of the area in which they occurred. 
+    </p>
+    <h2>Using This Website/Visualizing This Data</h2>
+    <p>Use any of the above navigations to go to the year you would like to look at. Each popup is a different fire that took place in that year. Click on the popups to see the fire date in yyyy-mm-dd format, the number of acres burned, 
+    the top 10 species in the area before and after the fire, and the change in the number of species. 
+    Unfortunately, the temporal data was not able to be visualized properly using folium and a flask server,
+    so if you would like to utilize the temporal map with an active slider, go to the github repository and look at the notebook.
+    </p>
+    <h3>Citations and Links</h3>
+    <p>GBIF.org (16 April 2023) GBIF Occurrence Download https://doi.org/10.15468/dl.4kw3g7</p>  
+    <a href ='https://doi.org/10.15468/dl.4kw3g7'> GBIF Data</a>
+    <a href ='https://www.kaggle.com/datasets/rtatman/188-million-us-wildfires'> Fire Data</a>  
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1cbbc8877bb34b65bf0d5bd7f1592ef6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1cbbc8877bb34b65bf0d5bd7f1592ef6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1cbbc8877bb34b65bf0d5bd7f1592ef6 = L.map(
+                "map_1cbbc8877bb34b65bf0d5bd7f1592ef6",
+                {
+                    center: [42.0, -102.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4.4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cd1281e73a8209dad1db41281a6d40cf = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+            var marker_cf804a6afb4b1128c82208cf5abcaeb2 = L.marker(
+                [47.90555556, -91.52416667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_df39d77a220089aec68b8c4244563060 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_355c150f4e75444196883bd017b6045f = $(`<div id="html_355c150f4e75444196883bd017b6045f" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-18</td>           <td style='border: 1px solid'>1454247</td>           <td style='border: 1px solid'>92682.0</td>           <td style='border: 1px solid'>['Acanthis hornemanni', 'Actitis macularius', 'Anas platyrhynchos', 'Bonasa umbellus', 'Buteo lagopus', 'Cathartes aura', 'Chrysemys picta', 'Dolichonyx oryzivorus', 'Grus canadensis']</td>           <td style='border: 1px solid'>['Acanthis hornemanni', 'Actitis macularius', 'Anas platyrhynchos', 'Bonasa umbellus', 'Buteo lagopus', 'Cathartes aura', 'Chrysemys picta', 'Dolichonyx oryzivorus', 'Grus canadensis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_df39d77a220089aec68b8c4244563060.setContent(html_355c150f4e75444196883bd017b6045f);
+            
+        
+
+        marker_cf804a6afb4b1128c82208cf5abcaeb2.bindPopup(popup_df39d77a220089aec68b8c4244563060)
+        ;
+
+        
+    
+    
+            var marker_eca54a606d2cfa21c72f9521c15611e9 = L.marker(
+                [36.26777778, -118.51166667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_e0927d7c307cdd50e6c683fc7a709ea4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f31b8de5206e4f1b0e97137e5c06758 = $(`<div id="html_8f31b8de5206e4f1b0e97137e5c06758" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-07-08</td>           <td style='border: 1px solid'>1457698</td>           <td style='border: 1px solid'>20500.0</td>           <td style='border: 1px solid'>['Alectoris chukar', 'Ammospermophilus leucurus', 'Anas clypeata', 'Anas cyanoptera', 'Aphelocoma californica', 'Artemisiospiza belli', 'Artemisiospiza nevadensis', 'Aythya collaris', 'Buteo jamaicensis']</td>           <td style='border: 1px solid'>['Alectoris chukar', 'Ammospermophilus leucurus', 'Anas clypeata', 'Anas cyanoptera', 'Aphelocoma californica', 'Artemisiospiza belli', 'Artemisiospiza nevadensis', 'Aythya collaris', 'Buteo jamaicensis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_e0927d7c307cdd50e6c683fc7a709ea4.setContent(html_8f31b8de5206e4f1b0e97137e5c06758);
+            
+        
+
+        marker_eca54a606d2cfa21c72f9521c15611e9.bindPopup(popup_e0927d7c307cdd50e6c683fc7a709ea4)
+        ;
+
+        
+    
+    
+            var marker_6dbdcb78cca47f33f81523b44618a4dd = L.marker(
+                [33.60611111, -109.44972222],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_11812b778e5ed3207261cbd94a77cbec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6772616f0dd717f428a1571d87bb64e8 = $(`<div id="html_6772616f0dd717f428a1571d87bb64e8" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-29</td>           <td style='border: 1px solid'>1459665</td>           <td style='border: 1px solid'>538049.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Abudefduf saxatilis', 'Acalymma vittatum', 'Acanthepeira stellata', 'Acanthinucella spirata', 'Acanthocephala terminalis', 'Acanthodoris hudsoni', 'Acanthodoris lutea']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Abudefduf saxatilis', 'Acalymma vittatum', 'Acanthepeira stellata', 'Acanthinucella spirata', 'Acanthocephala terminalis', 'Acanthodoris hudsoni', 'Acanthodoris lutea']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_11812b778e5ed3207261cbd94a77cbec.setContent(html_6772616f0dd717f428a1571d87bb64e8);
+            
+        
+
+        marker_6dbdcb78cca47f33f81523b44618a4dd.bindPopup(popup_11812b778e5ed3207261cbd94a77cbec)
+        ;
+
+        
+    
+    
+            var marker_062fa45a5dcf46bd50dc855f9a17ab06 = L.marker(
+                [31.37, -111.135556],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_ac53d9039b086619aa3d2fa623252494 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c2dec0b1ed2686fef45d7081701b941 = $(`<div id="html_5c2dec0b1ed2686fef45d7081701b941" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-03-11</td>           <td style='border: 1px solid'>1460209</td>           <td style='border: 1px solid'>6050.0</td>           <td style='border: 1px solid'>['Amphispizopsis quinquestriata', 'Aythya valisineria', 'Battus philenor', 'Dymasia dymas', 'Eutelia furcata', 'Lethocerus medius', 'Limenitis archippus', 'Meleagris gallopavo', 'Polioptila melanura']</td>           <td style='border: 1px solid'>['Amphispizopsis quinquestriata', 'Aythya valisineria', 'Battus philenor', 'Dymasia dymas', 'Eutelia furcata', 'Lethocerus medius', 'Limenitis archippus', 'Meleagris gallopavo', 'Polioptila melanura']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_ac53d9039b086619aa3d2fa623252494.setContent(html_5c2dec0b1ed2686fef45d7081701b941);
+            
+        
+
+        marker_062fa45a5dcf46bd50dc855f9a17ab06.bindPopup(popup_ac53d9039b086619aa3d2fa623252494)
+        ;
+
+        
+    
+    
+            var marker_76c4f7f9d39319b805727a1d411c8b7b = L.marker(
+                [31.39666667, -111.05666667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_3acd58a0a38e19c81839b7452bd3ed35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63536278fe5c8d570f8a97d68f9f4658 = $(`<div id="html_63536278fe5c8d570f8a97d68f9f4658" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-26</td>           <td style='border: 1px solid'>1460211</td>           <td style='border: 1px solid'>9711.0</td>           <td style='border: 1px solid'>['Amphispizopsis quinquestriata', 'Anas crecca', 'Anas cyanoptera', 'Aythya valisineria', 'Battus philenor', 'Dymasia dymas', 'Eutelia furcata', 'Lethocerus medius', 'Limenitis archippus']</td>           <td style='border: 1px solid'>['Amphispizopsis quinquestriata', 'Anas crecca', 'Anas cyanoptera', 'Aythya valisineria', 'Battus philenor', 'Dymasia dymas', 'Eutelia furcata', 'Lethocerus medius', 'Limenitis archippus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_3acd58a0a38e19c81839b7452bd3ed35.setContent(html_63536278fe5c8d570f8a97d68f9f4658);
+            
+        
+
+        marker_76c4f7f9d39319b805727a1d411c8b7b.bindPopup(popup_3acd58a0a38e19c81839b7452bd3ed35)
+        ;
+
+        
+    
+    
+            var marker_bdde524dc6204d2795c0c3554914eebd = L.marker(
+                [31.54055556, -111.15777778],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_05cb0af8d7a61470c9c6fef521446703 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d152cd6f7e1b6ce26ff5b5ad3859e64a = $(`<div id="html_d152cd6f7e1b6ce26ff5b5ad3859e64a" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-30</td>           <td style='border: 1px solid'>1460214</td>           <td style='border: 1px solid'>68079.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Acromyrmex versicolor', 'Ammospermophilus harrisii', 'Amphispiza bilineata', 'Amphispizopsis quinquestriata', 'Anas crecca', 'Anas cyanoptera', 'Anas platyrhynchos']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Acromyrmex versicolor', 'Ammospermophilus harrisii', 'Amphispiza bilineata', 'Amphispizopsis quinquestriata', 'Anas crecca', 'Anas cyanoptera', 'Anas platyrhynchos']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_05cb0af8d7a61470c9c6fef521446703.setContent(html_d152cd6f7e1b6ce26ff5b5ad3859e64a);
+            
+        
+
+        marker_bdde524dc6204d2795c0c3554914eebd.bindPopup(popup_05cb0af8d7a61470c9c6fef521446703)
+        ;
+
+        
+    
+    
+            var marker_a1a1aea825649cd707e1dca8d14dcbea = L.marker(
+                [31.81972222, -109.21111111],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_914d2e312eef3595a317c0d0bfe2c7fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b897ed047555502c8beda3ec1ac9bfb = $(`<div id="html_0b897ed047555502c8beda3ec1ac9bfb" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-08</td>           <td style='border: 1px solid'>1460218</td>           <td style='border: 1px solid'>222954.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Achyra rantalis', 'Acmaeodera tuta', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Acromyrmex versicolor']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Achyra rantalis', 'Acmaeodera tuta', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Acromyrmex versicolor']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_914d2e312eef3595a317c0d0bfe2c7fe.setContent(html_0b897ed047555502c8beda3ec1ac9bfb);
+            
+        
+
+        marker_a1a1aea825649cd707e1dca8d14dcbea.bindPopup(popup_914d2e312eef3595a317c0d0bfe2c7fe)
+        ;
+
+        
+    
+    
+            var marker_005ead3f95ac2e6e4ba163201801319d = L.marker(
+                [31.37916667, -110.75583333],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_981ffa9af573444f9941bb56689a73ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9e2cbf83406a60fe9433bcfc3d0f57eb = $(`<div id="html_9e2cbf83406a60fe9433bcfc3d0f57eb" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-03-20</td>           <td style='border: 1px solid'>1460232</td>           <td style='border: 1px solid'>8500.0</td>           <td style='border: 1px solid'>['Anas crecca', 'Anas cyanoptera', 'Antilocapra americana', 'Holbrookia elegans', 'Icterus parisorum', 'Leucolia violiceps', 'Nymphalis antiopa', 'Phainopepla nitens', 'Pyrocephalus rubinus']</td>           <td style='border: 1px solid'>['Anas crecca', 'Anas cyanoptera', 'Antilocapra americana', 'Holbrookia elegans', 'Icterus parisorum', 'Leucolia violiceps', 'Nymphalis antiopa', 'Phainopepla nitens', 'Pyrocephalus rubinus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_981ffa9af573444f9941bb56689a73ff.setContent(html_9e2cbf83406a60fe9433bcfc3d0f57eb);
+            
+        
+
+        marker_005ead3f95ac2e6e4ba163201801319d.bindPopup(popup_981ffa9af573444f9941bb56689a73ff)
+        ;
+
+        
+    
+    
+            var marker_dbb9ff209fbe326465ffcbc89d7bab09 = L.marker(
+                [31.33888889, -110.54583333],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_f9656cfa5f9fc800a51f46dbc293d67b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd671874295226da9a4d3e14f8d4aa26 = $(`<div id="html_bd671874295226da9a4d3e14f8d4aa26" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-23</td>           <td style='border: 1px solid'>1460250</td>           <td style='border: 1px solid'>10610.0</td>           <td style='border: 1px solid'>['Anas crecca', 'Anas cyanoptera', 'Antilocapra americana', 'Arhaphe arguta', 'Cynanthus latirostris', 'Empidonax fulvifrons', 'Epargyreus clarus', 'Eugenes fulgens', 'Holbrookia elegans']</td>           <td style='border: 1px solid'>['Anas crecca', 'Anas cyanoptera', 'Antilocapra americana', 'Arhaphe arguta', 'Cynanthus latirostris', 'Empidonax fulvifrons', 'Epargyreus clarus', 'Eugenes fulgens', 'Holbrookia elegans']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f9656cfa5f9fc800a51f46dbc293d67b.setContent(html_bd671874295226da9a4d3e14f8d4aa26);
+            
+        
+
+        marker_dbb9ff209fbe326465ffcbc89d7bab09.bindPopup(popup_f9656cfa5f9fc800a51f46dbc293d67b)
+        ;
+
+        
+    
+    
+            var marker_016b69c2587d7d8324ed74d51aa3d7f0 = L.marker(
+                [32.40333333, -104.90166667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_9031a199b5c1ca3e694c592a57b670a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_058d8e60c77aef495fcec5fea5ae1e9d = $(`<div id="html_058d8e60c77aef495fcec5fea5ae1e9d" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-07-20</td>           <td style='border: 1px solid'>1460456</td>           <td style='border: 1px solid'>18835.4</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Hetaerina americana', 'Meleagris gallopavo', 'Parkesia motacilla', 'Pheucticus ludovicianus']</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Hetaerina americana', 'Meleagris gallopavo', 'Parkesia motacilla', 'Pheucticus ludovicianus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_9031a199b5c1ca3e694c592a57b670a5.setContent(html_058d8e60c77aef495fcec5fea5ae1e9d);
+            
+        
+
+        marker_016b69c2587d7d8324ed74d51aa3d7f0.bindPopup(popup_9031a199b5c1ca3e694c592a57b670a5)
+        ;
+
+        
+    
+    
+            var marker_634d8fa79c4cfd40338e8568a3efd0b3 = L.marker(
+                [33.26805556, -111.18916667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_2001dab6a011cdcd59ed246835ef9283 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebc27af8fef0460dd9bf89d27290ead0 = $(`<div id="html_ebc27af8fef0460dd9bf89d27290ead0" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-08</td>           <td style='border: 1px solid'>1460654</td>           <td style='border: 1px solid'>1336.0</td>           <td style='border: 1px solid'>['Ammospermophilus harrisii', 'Callipepla gambelii', 'Calypte anna', 'Campylorhynchus brunneicapillus', 'Danaus gilippus', 'Papilio rumiko', 'Xerospermophilus tereticaudus']</td>           <td style='border: 1px solid'>['Ammospermophilus harrisii', 'Callipepla gambelii', 'Calypte anna', 'Campylorhynchus brunneicapillus', 'Danaus gilippus', 'Papilio rumiko', 'Xerospermophilus tereticaudus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_2001dab6a011cdcd59ed246835ef9283.setContent(html_ebc27af8fef0460dd9bf89d27290ead0);
+            
+        
+
+        marker_634d8fa79c4cfd40338e8568a3efd0b3.bindPopup(popup_2001dab6a011cdcd59ed246835ef9283)
+        ;
+
+        
+    
+    
+            var marker_a8c78c9519f20bfa96bb152ddbb0580b = L.marker(
+                [36.523, -96.6408],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_9ced067a481234643a55b47c4f8b2e01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_225fd91ecc989930e567d68a639e7e9d = $(`<div id="html_225fd91ecc989930e567d68a639e7e9d" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-03-23</td>           <td style='border: 1px solid'>1461791</td>           <td style='border: 1px solid'>11382.0</td>           <td style='border: 1px solid'>['Argia apicalis', 'Argia moesta', 'Bartramia longicauda', 'Chordeiles minor', 'Circus cyaneus', 'Dythemis fugax', 'Enallagma basidens', 'Enallagma signatum', 'Enallagma traviatum']</td>           <td style='border: 1px solid'>['Argia apicalis', 'Argia moesta', 'Bartramia longicauda', 'Chordeiles minor', 'Circus cyaneus', 'Dythemis fugax', 'Enallagma basidens', 'Enallagma signatum', 'Enallagma traviatum']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_9ced067a481234643a55b47c4f8b2e01.setContent(html_225fd91ecc989930e567d68a639e7e9d);
+            
+        
+
+        marker_a8c78c9519f20bfa96bb152ddbb0580b.bindPopup(popup_9ced067a481234643a55b47c4f8b2e01)
+        ;
+
+        
+    
+    
+            var marker_ef3481e319bc01f3cf70e8c557f2b2b0 = L.marker(
+                [33.283017, -116.539044],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_6ee07465b2f53b492bfba79270808bee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_558ccd7f571f5d8c08115df2edfe3c7b = $(`<div id="html_558ccd7f571f5d8c08115df2edfe3c7b" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-07-21</td>           <td style='border: 1px solid'>1464192</td>           <td style='border: 1px solid'>14100.0</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Amphispiza bilineata', 'Anas platyrhynchos', 'Aphelocoma californica', 'Apis mellifera', 'Arctostaphylos parryana', 'Argia vivida', 'Auriparus flaviceps', 'Bubo virginianus']</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Amphispiza bilineata', 'Anas platyrhynchos', 'Aphelocoma californica', 'Apis mellifera', 'Arctostaphylos parryana', 'Argia vivida', 'Auriparus flaviceps', 'Bubo virginianus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_6ee07465b2f53b492bfba79270808bee.setContent(html_558ccd7f571f5d8c08115df2edfe3c7b);
+            
+        
+
+        marker_ef3481e319bc01f3cf70e8c557f2b2b0.bindPopup(popup_6ee07465b2f53b492bfba79270808bee)
+        ;
+
+        
+    
+    
+            var marker_74abb8b08c7e8ccbd5aee8649bb7b033 = L.marker(
+                [35.1139, -118.1667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_64f4432080c122e2971e54aba1f4be9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f99182cd0188397de7d5131b5d2eff8 = $(`<div id="html_3f99182cd0188397de7d5131b5d2eff8" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-10</td>           <td style='border: 1px solid'>1466595</td>           <td style='border: 1px solid'>25577.0</td>           <td style='border: 1px solid'>['Accipiter striatus', 'Anniella campi', 'Antilocapra americana', 'Artemisiospiza belli', 'Buteo regalis', 'Callipepla californica', 'Callophrys dumetorum', 'Chen rossii', 'Chondestes grammacus']</td>           <td style='border: 1px solid'>['Accipiter striatus', 'Anniella campi', 'Antilocapra americana', 'Artemisiospiza belli', 'Buteo regalis', 'Callipepla californica', 'Callophrys dumetorum', 'Chen rossii', 'Chondestes grammacus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_64f4432080c122e2971e54aba1f4be9b.setContent(html_3f99182cd0188397de7d5131b5d2eff8);
+            
+        
+
+        marker_74abb8b08c7e8ccbd5aee8649bb7b033.bindPopup(popup_64f4432080c122e2971e54aba1f4be9b)
+        ;
+
+        
+    
+    
+            var marker_0684861b2b5051fd05a8c8a84b387253 = L.marker(
+                [42.6629, -115.9073],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_b17db59174a2770981970ab53b419764 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e3565582210f9c8016afca2f7f55bed = $(`<div id="html_5e3565582210f9c8016afca2f7f55bed" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-14</td>           <td style='border: 1px solid'>1467342</td>           <td style='border: 1px solid'>67061.0</td>           <td style='border: 1px solid'>['Accipiter striatus', 'Aglais milberti', 'Antilocapra americana', 'Apis mellifera', 'Canis latrans', 'Chrysemys picta', 'Falco sparverius', 'Forficula auricularia', 'Glaucopsyche lygdamus']</td>           <td style='border: 1px solid'>['Accipiter striatus', 'Aglais milberti', 'Antilocapra americana', 'Apis mellifera', 'Canis latrans', 'Chrysemys picta', 'Falco sparverius', 'Forficula auricularia', 'Glaucopsyche lygdamus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_b17db59174a2770981970ab53b419764.setContent(html_5e3565582210f9c8016afca2f7f55bed);
+            
+        
+
+        marker_0684861b2b5051fd05a8c8a84b387253.bindPopup(popup_b17db59174a2770981970ab53b419764)
+        ;
+
+        
+    
+    
+            var marker_b925e9100da07436f4cd3a71bd327274 = L.marker(
+                [43.364, -116.12893],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_5700016846409850f6746dd0d1ca7cb8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2382dbd8a96173edc504e5d2c49e4a72 = $(`<div id="html_2382dbd8a96173edc504e5d2c49e4a72" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-15</td>           <td style='border: 1px solid'>1467438</td>           <td style='border: 1px solid'>10527.0</td>           <td style='border: 1px solid'>['Falco sparverius', 'Glaucopsyche lygdamus']</td>           <td style='border: 1px solid'>['Falco sparverius', 'Glaucopsyche lygdamus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_5700016846409850f6746dd0d1ca7cb8.setContent(html_2382dbd8a96173edc504e5d2c49e4a72);
+            
+        
+
+        marker_b925e9100da07436f4cd3a71bd327274.bindPopup(popup_5700016846409850f6746dd0d1ca7cb8)
+        ;
+
+        
+    
+    
+            var marker_63342901d9dd2de6c0225bde8929df8d = L.marker(
+                [43.07248, -115.2981],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_6a53a62d5a1bb001f905548e62585c81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_048d10448da9d611ae39707fae186b42 = $(`<div id="html_048d10448da9d611ae39707fae186b42" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-14</td>           <td style='border: 1px solid'>1467441</td>           <td style='border: 1px solid'>39577.0</td>           <td style='border: 1px solid'>['Accipiter striatus', 'Falco sparverius', 'Glaucopsyche lygdamus', 'Odocoileus hemionus', 'Oncorhynchus clarkii', 'Pandion haliaetus', 'Phasianus colchicus', 'Tamiasciurus hudsonicus', 'Taxidea taxus']</td>           <td style='border: 1px solid'>['Accipiter striatus', 'Falco sparverius', 'Glaucopsyche lygdamus', 'Odocoileus hemionus', 'Oncorhynchus clarkii', 'Pandion haliaetus', 'Phasianus colchicus', 'Tamiasciurus hudsonicus', 'Taxidea taxus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_6a53a62d5a1bb001f905548e62585c81.setContent(html_048d10448da9d611ae39707fae186b42);
+            
+        
+
+        marker_63342901d9dd2de6c0225bde8929df8d.bindPopup(popup_6a53a62d5a1bb001f905548e62585c81)
+        ;
+
+        
+    
+    
+            var marker_a2fe4b92281e58e16e2ab7ec699d4d05 = L.marker(
+                [42.8622, -115.1208],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_f5f89f686a6ce8f385cd1d3760f9a90a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1439c9d8ae5c0c169dc6f29fda0a72a8 = $(`<div id="html_1439c9d8ae5c0c169dc6f29fda0a72a8" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-04</td>           <td style='border: 1px solid'>1467486</td>           <td style='border: 1px solid'>17382.0</td>           <td style='border: 1px solid'>['Odocoileus hemionus', 'Oncorhynchus clarkii', 'Phasianus colchicus']</td>           <td style='border: 1px solid'>['Odocoileus hemionus', 'Oncorhynchus clarkii', 'Phasianus colchicus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f5f89f686a6ce8f385cd1d3760f9a90a.setContent(html_1439c9d8ae5c0c169dc6f29fda0a72a8);
+            
+        
+
+        marker_a2fe4b92281e58e16e2ab7ec699d4d05.bindPopup(popup_f5f89f686a6ce8f385cd1d3760f9a90a)
+        ;
+
+        
+    
+    
+            var marker_46f50edd19271c94568d8639153759d5 = L.marker(
+                [42.76253, -115.39086],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_87f09a3501ab31e21f3902b5a5c6d0f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_febdc6c82661e5cc33330a9317fffb51 = $(`<div id="html_febdc6c82661e5cc33330a9317fffb51" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-10-01</td>           <td style='border: 1px solid'>1467491</td>           <td style='border: 1px solid'>21604.0</td>           <td style='border: 1px solid'>['Odocoileus hemionus', 'Oncorhynchus clarkii', 'Phasianus colchicus']</td>           <td style='border: 1px solid'>['Odocoileus hemionus', 'Oncorhynchus clarkii', 'Phasianus colchicus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_87f09a3501ab31e21f3902b5a5c6d0f0.setContent(html_febdc6c82661e5cc33330a9317fffb51);
+            
+        
+
+        marker_46f50edd19271c94568d8639153759d5.bindPopup(popup_87f09a3501ab31e21f3902b5a5c6d0f0)
+        ;
+
+        
+    
+    
+            var marker_ce8f2fa536904b524f0c89f49837fbc7 = L.marker(
+                [32.2325, -104.7522],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_b67eca531f32f71018f649c68eef2ff0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a38b46f887a52028828c5659a911391 = $(`<div id="html_0a38b46f887a52028828c5659a911391" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-24</td>           <td style='border: 1px solid'>1467758</td>           <td style='border: 1px solid'>53342.0</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Auriparus flaviceps', 'Campylorhynchus brunneicapillus', 'Cardinalis sinuatus', 'Hetaerina americana', 'Meleagris gallopavo', 'Numenius phaeopus', 'Parkesia motacilla', 'Pheucticus ludovicianus']</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Auriparus flaviceps', 'Campylorhynchus brunneicapillus', 'Cardinalis sinuatus', 'Hetaerina americana', 'Meleagris gallopavo', 'Numenius phaeopus', 'Parkesia motacilla', 'Pheucticus ludovicianus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_b67eca531f32f71018f649c68eef2ff0.setContent(html_0a38b46f887a52028828c5659a911391);
+            
+        
+
+        marker_ce8f2fa536904b524f0c89f49837fbc7.bindPopup(popup_b67eca531f32f71018f649c68eef2ff0)
+        ;
+
+        
+    
+    
+            var marker_47c6a364c2514405033658cc0393f942 = L.marker(
+                [32.895, -105.4892],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_e0c613cf67c4068b8b742f9419b17930 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc2e2c462d2e4c993e08b9b88bba168c = $(`<div id="html_cc2e2c462d2e4c993e08b9b88bba168c" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-09</td>           <td style='border: 1px solid'>1467771</td>           <td style='border: 1px solid'>31861.0</td>           <td style='border: 1px solid'>['Stinga morrisoni']</td>           <td style='border: 1px solid'>['Stinga morrisoni']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_e0c613cf67c4068b8b742f9419b17930.setContent(html_cc2e2c462d2e4c993e08b9b88bba168c);
+            
+        
+
+        marker_47c6a364c2514405033658cc0393f942.bindPopup(popup_e0c613cf67c4068b8b742f9419b17930)
+        ;
+
+        
+    
+    
+            var marker_724c8740aa765f6da994372ea0d5e343 = L.marker(
+                [32.1994, -104.5836],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_5f57e626504fa4741f73eb96fee26675 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2646aaa51d704adb5f642ff6a4d9666a = $(`<div id="html_2646aaa51d704adb5f642ff6a4d9666a" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-05</td>           <td style='border: 1px solid'>1467791</td>           <td style='border: 1px solid'>8157.0</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Hetaerina americana', 'Meleagris gallopavo', 'Parkesia motacilla', 'Pheucticus ludovicianus']</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Hetaerina americana', 'Meleagris gallopavo', 'Parkesia motacilla', 'Pheucticus ludovicianus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_5f57e626504fa4741f73eb96fee26675.setContent(html_2646aaa51d704adb5f642ff6a4d9666a);
+            
+        
+
+        marker_724c8740aa765f6da994372ea0d5e343.bindPopup(popup_5f57e626504fa4741f73eb96fee26675)
+        ;
+
+        
+    
+    
+            var marker_e338ec7221455d227c79d6c28d9ade51 = L.marker(
+                [33.0522, -103.8006],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_a6373a82435e15bb07998669aede8e80 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25c66379f042b243c9366210689d0ad3 = $(`<div id="html_25c66379f042b243c9366210689d0ad3" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-02-27</td>           <td style='border: 1px solid'>1467953</td>           <td style='border: 1px solid'>64936.0</td>           <td style='border: 1px solid'>['Anas cyanoptera', 'Anas platyrhynchos', 'Aquila chrysaetos', 'Asio otus', 'Aspidoscelis exsanguis', 'Auriparus flaviceps', 'Buteo jamaicensis', 'Buteo regalis', 'Campylorhynchus brunneicapillus']</td>           <td style='border: 1px solid'>['Anas cyanoptera', 'Anas platyrhynchos', 'Aquila chrysaetos', 'Asio otus', 'Aspidoscelis exsanguis', 'Auriparus flaviceps', 'Buteo jamaicensis', 'Buteo regalis', 'Campylorhynchus brunneicapillus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_a6373a82435e15bb07998669aede8e80.setContent(html_25c66379f042b243c9366210689d0ad3);
+            
+        
+
+        marker_e338ec7221455d227c79d6c28d9ade51.bindPopup(popup_a6373a82435e15bb07998669aede8e80)
+        ;
+
+        
+    
+    
+            var marker_39e6ce6f518fbafd82573acce72e6970 = L.marker(
+                [33.0481, -104.8883],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_258a637926fd0df0a966c80a6ba8d96a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7103396961d8850ef2653473ba004a7 = $(`<div id="html_f7103396961d8850ef2653473ba004a7" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-06</td>           <td style='border: 1px solid'>1467961</td>           <td style='border: 1px solid'>18199.0</td>           <td style='border: 1px solid'>['Anas cyanoptera', 'Himantopus mexicanus', 'Hydroprogne caspia', 'Leucophaeus pipixcan', 'Numenius phaeopus', 'Nycticorax nycticorax', 'Plegadis chihi', 'Tringa semipalmata']</td>           <td style='border: 1px solid'>['Anas cyanoptera', 'Himantopus mexicanus', 'Hydroprogne caspia', 'Leucophaeus pipixcan', 'Numenius phaeopus', 'Nycticorax nycticorax', 'Plegadis chihi', 'Tringa semipalmata']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_258a637926fd0df0a966c80a6ba8d96a.setContent(html_f7103396961d8850ef2653473ba004a7);
+            
+        
+
+        marker_39e6ce6f518fbafd82573acce72e6970.bindPopup(popup_258a637926fd0df0a966c80a6ba8d96a)
+        ;
+
+        
+    
+    
+            var marker_e8468535bab2a969d7105d4f8b7eddd4 = L.marker(
+                [33.2217, -105.0014],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_6eee591e7124090907850cce80e1f6bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4de4d857f8f0f8a71510b8bd278a716 = $(`<div id="html_d4de4d857f8f0f8a71510b8bd278a716" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-07</td>           <td style='border: 1px solid'>1467994</td>           <td style='border: 1px solid'>35165.0</td>           <td style='border: 1px solid'>['Anas cyanoptera', 'Aquila chrysaetos', 'Auriparus flaviceps', 'Campylorhynchus brunneicapillus', 'Cardinalis sinuatus', 'Himantopus mexicanus', 'Hydroprogne caspia', 'Leucophaeus pipixcan', 'Numenius phaeopus']</td>           <td style='border: 1px solid'>['Anas cyanoptera', 'Aquila chrysaetos', 'Auriparus flaviceps', 'Campylorhynchus brunneicapillus', 'Cardinalis sinuatus', 'Himantopus mexicanus', 'Hydroprogne caspia', 'Leucophaeus pipixcan', 'Numenius phaeopus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_6eee591e7124090907850cce80e1f6bb.setContent(html_d4de4d857f8f0f8a71510b8bd278a716);
+            
+        
+
+        marker_e8468535bab2a969d7105d4f8b7eddd4.bindPopup(popup_6eee591e7124090907850cce80e1f6bb)
+        ;
+
+        
+    
+    
+            var marker_0ba22fd03dc8b15659bf1e395fc722a6 = L.marker(
+                [40.9486, -116.2353],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_cc6127d685f886544a3458ec3a82a950 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_848443244c76106732c4b12cb7540776 = $(`<div id="html_848443244c76106732c4b12cb7540776" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-30</td>           <td style='border: 1px solid'>1468267</td>           <td style='border: 1px solid'>110826.7</td>           <td style='border: 1px solid'>['Aechmophorus occidentalis', 'Anas clypeata', 'Aquila chrysaetos', 'Ardea alba', 'Asio flammeus', 'Athene cunicularia', 'Bombycilla cedrorum', 'Botaurus lentiginosus', 'Bubo virginianus']</td>           <td style='border: 1px solid'>['Aechmophorus occidentalis', 'Anas clypeata', 'Aquila chrysaetos', 'Ardea alba', 'Asio flammeus', 'Athene cunicularia', 'Bombycilla cedrorum', 'Botaurus lentiginosus', 'Bubo virginianus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_cc6127d685f886544a3458ec3a82a950.setContent(html_848443244c76106732c4b12cb7540776);
+            
+        
+
+        marker_0ba22fd03dc8b15659bf1e395fc722a6.bindPopup(popup_cc6127d685f886544a3458ec3a82a950)
+        ;
+
+        
+    
+    
+            var marker_1800077442fc8e8f918f61048a833f91 = L.marker(
+                [45.0369, -121.0789],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_3757db972fca19feb48d0c1f1526ce6b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b9402a67975d5004d6db4116ed122af = $(`<div id="html_1b9402a67975d5004d6db4116ed122af" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-24</td>           <td style='border: 1px solid'>1468851</td>           <td style='border: 1px solid'>51384.0</td>           <td style='border: 1px solid'>['Ardea herodias', 'Aythya affinis', 'Bucephala clangula', 'Bucephala islandica', 'Catherpes mexicanus', 'Dicamptodon tenebrosus', 'Dryobates pubescens', 'Ebo evansae', 'Falco sparverius']</td>           <td style='border: 1px solid'>['Ardea herodias', 'Aythya affinis', 'Bucephala clangula', 'Bucephala islandica', 'Catherpes mexicanus', 'Dicamptodon tenebrosus', 'Dryobates pubescens', 'Ebo evansae', 'Falco sparverius']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_3757db972fca19feb48d0c1f1526ce6b.setContent(html_1b9402a67975d5004d6db4116ed122af);
+            
+        
+
+        marker_1800077442fc8e8f918f61048a833f91.bindPopup(popup_3757db972fca19feb48d0c1f1526ce6b)
+        ;
+
+        
+    
+    
+            var marker_d814f37d50688cd3fe4efbe4d78474b9 = L.marker(
+                [31.3342, -110.2364],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_5661c8fa6db7396029c59d0c68ce169e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8baca7de11f299bab172c5fe9b8505eb = $(`<div id="html_8baca7de11f299bab172c5fe9b8505eb" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-12</td>           <td style='border: 1px solid'>1469735</td>           <td style='border: 1px solid'>30526.0</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Amphispiza bilineata', 'Anas crecca', 'Anas cyanoptera', 'Anas platyrhynchos', 'Antilocapra americana', 'Aphelocoma wollweberi', 'Aquarius remigis', 'Archilochus alexandri']</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Amphispiza bilineata', 'Anas crecca', 'Anas cyanoptera', 'Anas platyrhynchos', 'Antilocapra americana', 'Aphelocoma wollweberi', 'Aquarius remigis', 'Archilochus alexandri']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_5661c8fa6db7396029c59d0c68ce169e.setContent(html_8baca7de11f299bab172c5fe9b8505eb);
+            
+        
+
+        marker_d814f37d50688cd3fe4efbe4d78474b9.bindPopup(popup_5661c8fa6db7396029c59d0c68ce169e)
+        ;
+
+        
+    
+    
+            var marker_9df31e635d57c37b5a750a2e24363438 = L.marker(
+                [32.1753, -104.4903],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_0a6491a5dafbb6cb5003f3945afec8e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92f026d7f24bbcb57aff33d976f908d7 = $(`<div id="html_92f026d7f24bbcb57aff33d976f908d7" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-13</td>           <td style='border: 1px solid'>1469842</td>           <td style='border: 1px solid'>30487.0</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Auriparus flaviceps', 'Campylorhynchus brunneicapillus', 'Cardinalis sinuatus', 'Hetaerina americana', 'Meleagris gallopavo', 'Parkesia motacilla', 'Pheucticus ludovicianus', 'Phrynosoma modestum']</td>           <td style='border: 1px solid'>['Aspidoscelis exsanguis', 'Auriparus flaviceps', 'Campylorhynchus brunneicapillus', 'Cardinalis sinuatus', 'Hetaerina americana', 'Meleagris gallopavo', 'Parkesia motacilla', 'Pheucticus ludovicianus', 'Phrynosoma modestum']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_0a6491a5dafbb6cb5003f3945afec8e9.setContent(html_92f026d7f24bbcb57aff33d976f908d7);
+            
+        
+
+        marker_9df31e635d57c37b5a750a2e24363438.bindPopup(popup_0a6491a5dafbb6cb5003f3945afec8e9)
+        ;
+
+        
+    
+    
+            var marker_0526182871dee09efa09e3a91f9c2501 = L.marker(
+                [33.14369, -108.36869],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_5425921a472af0b45f8c525e8644babb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_924ae08f0594cf47a6e149bb503ca4d3 = $(`<div id="html_924ae08f0594cf47a6e149bb503ca4d3" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-28</td>           <td style='border: 1px solid'>1469852</td>           <td style='border: 1px solid'>88835.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Aechmophorus occidentalis', 'Aix sponsa', 'Alypia octomaculata', 'Ameiurus natalis', 'Amphispiza bilineata', 'Anas acuta', 'Anas americana']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Aechmophorus occidentalis', 'Aix sponsa', 'Alypia octomaculata', 'Ameiurus natalis', 'Amphispiza bilineata', 'Anas acuta', 'Anas americana']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_5425921a472af0b45f8c525e8644babb.setContent(html_924ae08f0594cf47a6e149bb503ca4d3);
+            
+        
+
+        marker_0526182871dee09efa09e3a91f9c2501.bindPopup(popup_5425921a472af0b45f8c525e8644babb)
+        ;
+
+        
+    
+    
+            var marker_53bb3487b2c950d56cef0b4238418e43 = L.marker(
+                [30.5325, -94.3028],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_d35d1b89237f8280f3ddc5d79a32c12b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_345ff8d661c0f722797037acba754d2b = $(`<div id="html_345ff8d661c0f722797037acba754d2b" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-16</td>           <td style='border: 1px solid'>1469877</td>           <td style='border: 1px solid'>7091.0</td>           <td style='border: 1px solid'>['Anolis carolinensis', 'Aspidoscelis sexlineatus', 'Bombus impatiens', 'Buteo lineatus', 'Calopogon tuberosus', 'Enodia portlandia', 'Euptychia phocion', 'Nyctanassa violacea', 'Polygonia interrogationis']</td>           <td style='border: 1px solid'>['Anolis carolinensis', 'Aspidoscelis sexlineatus', 'Bombus impatiens', 'Buteo lineatus', 'Calopogon tuberosus', 'Enodia portlandia', 'Euptychia phocion', 'Nyctanassa violacea', 'Polygonia interrogationis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_d35d1b89237f8280f3ddc5d79a32c12b.setContent(html_345ff8d661c0f722797037acba754d2b);
+            
+        
+
+        marker_53bb3487b2c950d56cef0b4238418e43.bindPopup(popup_d35d1b89237f8280f3ddc5d79a32c12b)
+        ;
+
+        
+    
+    
+            var marker_bc4e8da175b8612d1a1a4e44e4d9c339 = L.marker(
+                [35.6903, -101.9164],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_abc20c1c029545d08776dadc89977cbb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b94b5237dd78938e7c4b2c6726aff2d = $(`<div id="html_3b94b5237dd78938e7c4b2c6726aff2d" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-09</td>           <td style='border: 1px solid'>1469908</td>           <td style='border: 1px solid'>60000.0</td>           <td style='border: 1px solid'>['Aimophila ruficeps', 'Anaxyrus woodhousii', 'Antilocapra americana', 'Aquila chrysaetos', 'Aspidoscelis tesselatus', 'Baeolophus atricristatus', 'Bubulcus ibis', 'Buteo lagopus', 'Buteo regalis']</td>           <td style='border: 1px solid'>['Aimophila ruficeps', 'Anaxyrus woodhousii', 'Antilocapra americana', 'Aquila chrysaetos', 'Aspidoscelis tesselatus', 'Baeolophus atricristatus', 'Bubulcus ibis', 'Buteo lagopus', 'Buteo regalis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_abc20c1c029545d08776dadc89977cbb.setContent(html_3b94b5237dd78938e7c4b2c6726aff2d);
+            
+        
+
+        marker_bc4e8da175b8612d1a1a4e44e4d9c339.bindPopup(popup_abc20c1c029545d08776dadc89977cbb)
+        ;
+
+        
+    
+    
+            var marker_56d6b7b67a78d9634288143f541b21ae = L.marker(
+                [25.9728, -81.0714],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_314d1809511cdf0ae9ff37e235d6fb70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff77d0e3178018a4aa65bc4bf40031e0 = $(`<div id="html_ff77d0e3178018a4aa65bc4bf40031e0" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-26</td>           <td style='border: 1px solid'>1470305</td>           <td style='border: 1px solid'>38131.0</td>           <td style='border: 1px solid'>['Acridotheres tristis', 'Actitis macularius', 'Aethiopocassis scripta', 'Agama picticauda', 'Agkistrodon conanti', 'Alaus oculatus', 'Alligator mississippiensis', 'Alopochen aegyptiaca', 'Amazona finschi']</td>           <td style='border: 1px solid'>['Acridotheres tristis', 'Actitis macularius', 'Aethiopocassis scripta', 'Agama picticauda', 'Agkistrodon conanti', 'Alaus oculatus', 'Alligator mississippiensis', 'Alopochen aegyptiaca', 'Amazona finschi']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_314d1809511cdf0ae9ff37e235d6fb70.setContent(html_ff77d0e3178018a4aa65bc4bf40031e0);
+            
+        
+
+        marker_56d6b7b67a78d9634288143f541b21ae.bindPopup(popup_314d1809511cdf0ae9ff37e235d6fb70)
+        ;
+
+        
+    
+    
+            var marker_b787253532cbb92f884d9884a71ce981 = L.marker(
+                [25.8019, -80.4694],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_cca652bb02a437adc4dcd7d1bd1cd67c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff4aff0b0706b16d947f4b6a826745d4 = $(`<div id="html_ff4aff0b0706b16d947f4b6a826745d4" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-06</td>           <td style='border: 1px solid'>1470346</td>           <td style='border: 1px solid'>68295.0</td>           <td style='border: 1px solid'>['Acontia onagrus', 'Acridotheres tristis', 'Actitis macularius', 'Aethiopocassis scripta', 'Aetobatus narinari', 'Agama picticauda', 'Agkistrodon conanti', 'Alaus oculatus', 'Alligator mississippiensis']</td>           <td style='border: 1px solid'>['Acontia onagrus', 'Acridotheres tristis', 'Actitis macularius', 'Aethiopocassis scripta', 'Aetobatus narinari', 'Agama picticauda', 'Agkistrodon conanti', 'Alaus oculatus', 'Alligator mississippiensis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_cca652bb02a437adc4dcd7d1bd1cd67c.setContent(html_ff4aff0b0706b16d947f4b6a826745d4);
+            
+        
+
+        marker_b787253532cbb92f884d9884a71ce981.bindPopup(popup_cca652bb02a437adc4dcd7d1bd1cd67c)
+        ;
+
+        
+    
+    
+            var marker_734501e8adef4d7e395194d50b872292 = L.marker(
+                [25.7333, -80.5333],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_b9bf4a2be0a26a7817e858cdd60a4d37 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d3b60e98420323e85faacfabeac7352 = $(`<div id="html_0d3b60e98420323e85faacfabeac7352" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-01</td>           <td style='border: 1px solid'>1470351</td>           <td style='border: 1px solid'>10423.0</td>           <td style='border: 1px solid'>['Agama picticauda', 'Alligator mississippiensis', 'Amazona finschi', 'Anartia jatrophae', 'Anas clypeata', 'Anhinga anhinga', 'Anolis carolinensis', 'Anolis distichus', 'Anolis sagrei']</td>           <td style='border: 1px solid'>['Agama picticauda', 'Alligator mississippiensis', 'Amazona finschi', 'Anartia jatrophae', 'Anas clypeata', 'Anhinga anhinga', 'Anolis carolinensis', 'Anolis distichus', 'Anolis sagrei']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_b9bf4a2be0a26a7817e858cdd60a4d37.setContent(html_0d3b60e98420323e85faacfabeac7352);
+            
+        
+
+        marker_734501e8adef4d7e395194d50b872292.bindPopup(popup_b9bf4a2be0a26a7817e858cdd60a4d37)
+        ;
+
+        
+    
+    
+            var marker_066ecf4d11a4373ebc64381f2070f63c = L.marker(
+                [25.7094, -80.6286],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_b8e7e4ddb317ab221f7fb0b360a3fc4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2491b0f6fdf2f5d0636d4aad4c269c8 = $(`<div id="html_c2491b0f6fdf2f5d0636d4aad4c269c8" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-08-23</td>           <td style='border: 1px solid'>1470358</td>           <td style='border: 1px solid'>7491.0</td>           <td style='border: 1px solid'>['Alligator mississippiensis', 'Anhinga anhinga', 'Anolis carolinensis', 'Aramus guarauna', 'Ardea alba', 'Ardea herodias', 'Botaurus lentiginosus', 'Buteo lineatus', 'Butorides virescens']</td>           <td style='border: 1px solid'>['Alligator mississippiensis', 'Anhinga anhinga', 'Anolis carolinensis', 'Aramus guarauna', 'Ardea alba', 'Ardea herodias', 'Botaurus lentiginosus', 'Buteo lineatus', 'Butorides virescens']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_b8e7e4ddb317ab221f7fb0b360a3fc4b.setContent(html_c2491b0f6fdf2f5d0636d4aad4c269c8);
+            
+        
+
+        marker_066ecf4d11a4373ebc64381f2070f63c.bindPopup(popup_b8e7e4ddb317ab221f7fb0b360a3fc4b)
+        ;
+
+        
+    
+    
+            var marker_9e384e3ff5c4c9dd0a377d26890b8873 = L.marker(
+                [34.71111111, -98.61333333],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_36f5cdffa1377c771acd7c14466223e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a4e7694c86b5554f0a3b7a002cc8853 = $(`<div id="html_8a4e7694c86b5554f0a3b7a002cc8853" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-01</td>           <td style='border: 1px solid'>1470606</td>           <td style='border: 1px solid'>39907.0</td>           <td style='border: 1px solid'>['Acris blanchardi', 'Agelaius phoeniceus', 'Amblyomma americanum', 'Anaea andria', 'Anax junius', 'Argia nahuana', 'Bubo virginianus', 'Cathartes aura', 'Charadrius nivosus']</td>           <td style='border: 1px solid'>['Acris blanchardi', 'Agelaius phoeniceus', 'Amblyomma americanum', 'Anaea andria', 'Anax junius', 'Argia nahuana', 'Bubo virginianus', 'Cathartes aura', 'Charadrius nivosus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_36f5cdffa1377c771acd7c14466223e2.setContent(html_8a4e7694c86b5554f0a3b7a002cc8853);
+            
+        
+
+        marker_9e384e3ff5c4c9dd0a377d26890b8873.bindPopup(popup_36f5cdffa1377c771acd7c14466223e2)
+        ;
+
+        
+    
+    
+            var marker_8ad62731b27e21e75b510c1999f4e67b = L.marker(
+                [35.597221, -75.800312],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_be7f88a3e2a1c590719536ee8358585d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91dda5bd9c91f10f3a11d9ed492698a2 = $(`<div id="html_91dda5bd9c91f10f3a11d9ed492698a2" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-05</td>           <td style='border: 1px solid'>1470949</td>           <td style='border: 1px solid'>45294.0</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Agkistrodon piscivorus', 'Ammodramus henslowii', 'Anolis carolinensis', 'Anthus rubescens', 'Armases cinereum', 'Aspidoscelis sexlineatus', 'Cancer irroratus', 'Chordeiles minor']</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Agkistrodon piscivorus', 'Ammodramus henslowii', 'Anolis carolinensis', 'Anthus rubescens', 'Armases cinereum', 'Aspidoscelis sexlineatus', 'Cancer irroratus', 'Chordeiles minor']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_be7f88a3e2a1c590719536ee8358585d.setContent(html_91dda5bd9c91f10f3a11d9ed492698a2);
+            
+        
+
+        marker_8ad62731b27e21e75b510c1999f4e67b.bindPopup(popup_be7f88a3e2a1c590719536ee8358585d)
+        ;
+
+        
+    
+    
+            var marker_44b4e8f33abaff77b6a813ae36f49a87 = L.marker(
+                [28.61944444, -80.75472222],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_a974f3e3795ac28cc1eb326980b103c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ecfc8b554c31f0c2644d01134a47cee = $(`<div id="html_5ecfc8b554c31f0c2644d01134a47cee" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-07-14</td>           <td style='border: 1px solid'>1471043</td>           <td style='border: 1px solid'>2800.0</td>           <td style='border: 1px solid'>['Acanthocephala declivis', 'Alligator mississippiensis', 'Anas acuta', 'Anas discors', 'Anas fulvigula', 'Aphelocoma coerulescens', 'Butorides virescens', 'Charadrius vociferus', 'Dione vanillae']</td>           <td style='border: 1px solid'>['Acanthocephala declivis', 'Alligator mississippiensis', 'Anas acuta', 'Anas discors', 'Anas fulvigula', 'Aphelocoma coerulescens', 'Butorides virescens', 'Charadrius vociferus', 'Dione vanillae']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_a974f3e3795ac28cc1eb326980b103c6.setContent(html_5ecfc8b554c31f0c2644d01134a47cee);
+            
+        
+
+        marker_44b4e8f33abaff77b6a813ae36f49a87.bindPopup(popup_a974f3e3795ac28cc1eb326980b103c6)
+        ;
+
+        
+    
+    
+            var marker_11aefc80e0d412e7677b835ecaf5a2c3 = L.marker(
+                [28.73472222, -80.96611111],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_ffa05162fdcf1fbe623c6db276689dd3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33222a08a3445a5b87e9de131ee93def = $(`<div id="html_33222a08a3445a5b87e9de131ee93def" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-02-28</td>           <td style='border: 1px solid'>1471105</td>           <td style='border: 1px solid'>17000.0</td>           <td style='border: 1px solid'>['Acanthocephala declivis', 'Acmaeodera ornata', 'Alligator mississippiensis', 'Anartia jatrophae', 'Anas acuta', 'Anas clypeata', 'Anas discors', 'Anas fulvigula', 'Anaxyrus terrestris']</td>           <td style='border: 1px solid'>['Acanthocephala declivis', 'Acmaeodera ornata', 'Alligator mississippiensis', 'Anartia jatrophae', 'Anas acuta', 'Anas clypeata', 'Anas discors', 'Anas fulvigula', 'Anaxyrus terrestris']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_ffa05162fdcf1fbe623c6db276689dd3.setContent(html_33222a08a3445a5b87e9de131ee93def);
+            
+        
+
+        marker_11aefc80e0d412e7677b835ecaf5a2c3.bindPopup(popup_ffa05162fdcf1fbe623c6db276689dd3)
+        ;
+
+        
+    
+    
+            var marker_574673e9c56f6852cb011826b79a8b8b = L.marker(
+                [30.72972, -82.36861],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_8aee7a4801ed52bcd19e02ef5977cb00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ecfa289331bba02c5caebddb9ddc9f27 = $(`<div id="html_ecfa289331bba02c5caebddb9ddc9f27" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-29</td>           <td style='border: 1px solid'>1471309</td>           <td style='border: 1px solid'>309200.0</td>           <td style='border: 1px solid'>['Acanthocephala declivis', 'Acanthocephala terminalis', 'Accipiter cooperii', 'Accipiter striatus', 'Acericecis ocellaris', 'Acharia stimulea', 'Achatia distincta', 'Acleris flavivittana', 'Acleris maculidorsana']</td>           <td style='border: 1px solid'>['Acanthocephala declivis', 'Acanthocephala terminalis', 'Accipiter cooperii', 'Accipiter striatus', 'Acericecis ocellaris', 'Acharia stimulea', 'Achatia distincta', 'Acleris flavivittana', 'Acleris maculidorsana']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_8aee7a4801ed52bcd19e02ef5977cb00.setContent(html_ecfa289331bba02c5caebddb9ddc9f27);
+            
+        
+
+        marker_574673e9c56f6852cb011826b79a8b8b.bindPopup(popup_8aee7a4801ed52bcd19e02ef5977cb00)
+        ;
+
+        
+    
+    
+            var marker_dd36d1e4303a323dbc3125c8d4144e52 = L.marker(
+                [29.83555556, -93.57138889],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_8bc8e1f2d567f4a7861cd9a80e8b2525 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_271c09bad11c98d545a598aa4bb91ca7 = $(`<div id="html_271c09bad11c98d545a598aa4bb91ca7" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-16</td>           <td style='border: 1px solid'>1471339</td>           <td style='border: 1px solid'>5968.0</td>           <td style='border: 1px solid'>['Charadrius nivosus', 'Coccyzus americanus', 'Contopus virens', 'Dumetella carolinensis', 'Icterus spurius', 'Mniotilta varia', 'Piranga rubra', 'Seiurus aurocapilla', 'Setophaga castanea']</td>           <td style='border: 1px solid'>['Charadrius nivosus', 'Coccyzus americanus', 'Contopus virens', 'Dumetella carolinensis', 'Icterus spurius', 'Mniotilta varia', 'Piranga rubra', 'Seiurus aurocapilla', 'Setophaga castanea']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_8bc8e1f2d567f4a7861cd9a80e8b2525.setContent(html_271c09bad11c98d545a598aa4bb91ca7);
+            
+        
+
+        marker_dd36d1e4303a323dbc3125c8d4144e52.bindPopup(popup_8bc8e1f2d567f4a7861cd9a80e8b2525)
+        ;
+
+        
+    
+    
+            var marker_a955b9f92a2382a9d2a0a824ecad1c25 = L.marker(
+                [31.20029008, -82.5240704],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_f62c19c37b4271349954a468fc0e7576 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93a312b0186d74ec0e2b6bf767f031f5 = $(`<div id="html_93a312b0186d74ec0e2b6bf767f031f5" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-15</td>           <td style='border: 1px solid'>1491562</td>           <td style='border: 1px solid'>19198.0</td>           <td style='border: 1px solid'>['Buteo lineatus']</td>           <td style='border: 1px solid'>['Buteo lineatus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f62c19c37b4271349954a468fc0e7576.setContent(html_93a312b0186d74ec0e2b6bf767f031f5);
+            
+        
+
+        marker_a955b9f92a2382a9d2a0a824ecad1c25.bindPopup(popup_f62c19c37b4271349954a468fc0e7576)
+        ;
+
+        
+    
+    
+            var marker_8268a53883d8ae97bd1ccd6430ca1542 = L.marker(
+                [34.69383, -103.725],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_ed9b1d78297b5b55f7d0de0617020671 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11442bbeb69bb019279010fab64ab2b6 = $(`<div id="html_11442bbeb69bb019279010fab64ab2b6" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-18</td>           <td style='border: 1px solid'>1496311</td>           <td style='border: 1px solid'>32243.0</td>           <td style='border: 1px solid'>['Asio otus', 'Contopus virens', 'Ixoreus naevius', 'Melospiza georgiana', 'Sceloporus consobrinus', 'Setophaga petechia', 'Tyto alba']</td>           <td style='border: 1px solid'>['Asio otus', 'Contopus virens', 'Ixoreus naevius', 'Melospiza georgiana', 'Sceloporus consobrinus', 'Setophaga petechia', 'Tyto alba']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_ed9b1d78297b5b55f7d0de0617020671.setContent(html_11442bbeb69bb019279010fab64ab2b6);
+            
+        
+
+        marker_8268a53883d8ae97bd1ccd6430ca1542.bindPopup(popup_ed9b1d78297b5b55f7d0de0617020671)
+        ;
+
+        
+    
+    
+            var marker_052911da7d5b0b8ea1a55327442b716d = L.marker(
+                [33.300667, -105.237056],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_cb596bd44853f793f5d4b27a8159b6f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b796e2849a60c27ed54483c17b725011 = $(`<div id="html_b796e2849a60c27ed54483c17b725011" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-28</td>           <td style='border: 1px solid'>1496448</td>           <td style='border: 1px solid'>101562.0</td>           <td style='border: 1px solid'>['Aechmophorus occidentalis', 'Aix sponsa', 'Alypia octomaculata', 'Amphispiza bilineata', 'Anas acuta', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas cyanoptera']</td>           <td style='border: 1px solid'>['Aechmophorus occidentalis', 'Aix sponsa', 'Alypia octomaculata', 'Amphispiza bilineata', 'Anas acuta', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas cyanoptera']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_cb596bd44853f793f5d4b27a8159b6f1.setContent(html_b796e2849a60c27ed54483c17b725011);
+            
+        
+
+        marker_052911da7d5b0b8ea1a55327442b716d.bindPopup(popup_cb596bd44853f793f5d4b27a8159b6f1)
+        ;
+
+        
+    
+    
+            var marker_e58edc61993c88780160e9573f0bd9fe = L.marker(
+                [31.658611, -108.707222],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_a20140968ced99d54df930d23d3e6d8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54b3c1910c5d3094b3d23636749b8d69 = $(`<div id="html_54b3c1910c5d3094b3d23636749b8d69" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-13</td>           <td style='border: 1px solid'>1496560</td>           <td style='border: 1px solid'>15086.0</td>           <td style='border: 1px solid'>['Anthocharis thoosa', 'Battus philenor', 'Icterus cucullatus', 'Nasua narica', 'Pecari tajacu', 'Pituophis catenifer', 'Strymon melinus', 'Systasea zampa', 'Vanessa atalanta']</td>           <td style='border: 1px solid'>['Anthocharis thoosa', 'Battus philenor', 'Icterus cucullatus', 'Nasua narica', 'Pecari tajacu', 'Pituophis catenifer', 'Strymon melinus', 'Systasea zampa', 'Vanessa atalanta']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_a20140968ced99d54df930d23d3e6d8a.setContent(html_54b3c1910c5d3094b3d23636749b8d69);
+            
+        
+
+        marker_e58edc61993c88780160e9573f0bd9fe.bindPopup(popup_a20140968ced99d54df930d23d3e6d8a)
+        ;
+
+        
+    
+    
+            var marker_538f7f797ee73d1509ed8ee11aed8bc5 = L.marker(
+                [32.9267, -103.5731],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_38f93658fc47efc5a78f5a925b539fe8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91bf9cf283569409156dd73925448423 = $(`<div id="html_91bf9cf283569409156dd73925448423" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-25</td>           <td style='border: 1px solid'>1496570</td>           <td style='border: 1px solid'>24781.0</td>           <td style='border: 1px solid'>['Auriparus flaviceps', 'Cardinalis sinuatus', 'Phrynosoma modestum', 'Pituophis catenifer', 'Rhinocheilus lecontei', 'Toxostoma curvirostre', 'Tyto alba', 'Zenaida macroura']</td>           <td style='border: 1px solid'>['Auriparus flaviceps', 'Cardinalis sinuatus', 'Phrynosoma modestum', 'Pituophis catenifer', 'Rhinocheilus lecontei', 'Toxostoma curvirostre', 'Tyto alba', 'Zenaida macroura']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_38f93658fc47efc5a78f5a925b539fe8.setContent(html_91bf9cf283569409156dd73925448423);
+            
+        
+
+        marker_538f7f797ee73d1509ed8ee11aed8bc5.bindPopup(popup_38f93658fc47efc5a78f5a925b539fe8)
+        ;
+
+        
+    
+    
+            var marker_a7ff1f305f85cb00ddebc7ebc21dd8c0 = L.marker(
+                [33.1525, -103.637778],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_e6b33789a0bf639aa4878a0fc9869e24 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7d3ff466dfd116050f1e91b66247a87 = $(`<div id="html_c7d3ff466dfd116050f1e91b66247a87" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-03-24</td>           <td style='border: 1px solid'>1497283</td>           <td style='border: 1px solid'>21510.0</td>           <td style='border: 1px solid'>['Phrynosoma modestum', 'Pituophis catenifer', 'Rhinocheilus lecontei', 'Sceloporus arenicolus', 'Tympanuchus pallidicinctus', 'Tyto alba']</td>           <td style='border: 1px solid'>['Phrynosoma modestum', 'Pituophis catenifer', 'Rhinocheilus lecontei', 'Sceloporus arenicolus', 'Tympanuchus pallidicinctus', 'Tyto alba']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_e6b33789a0bf639aa4878a0fc9869e24.setContent(html_c7d3ff466dfd116050f1e91b66247a87);
+            
+        
+
+        marker_a7ff1f305f85cb00ddebc7ebc21dd8c0.bindPopup(popup_e6b33789a0bf639aa4878a0fc9869e24)
+        ;
+
+        
+    
+    
+            var marker_041217da2eb8d1a78359f785d417425b = L.marker(
+                [35.811667, -106.536667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_853942b2a729bb1925237ce1620e9da0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3326c92b064f09e74cc80b31b50de944 = $(`<div id="html_3326c92b064f09e74cc80b31b50de944" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-26</td>           <td style='border: 1px solid'>1500224</td>           <td style='border: 1px solid'>156593.0</td>           <td style='border: 1px solid'>['Aechmophorus clarkii', 'Aechmophorus occidentalis', 'Aegolius acadicus', 'Aeronautes saxatalis', 'Aimophila ruficeps', 'Aix sponsa', 'Alypia octomaculata', 'Ameiurus natalis', 'Ammospermophilus leucurus']</td>           <td style='border: 1px solid'>['Aechmophorus clarkii', 'Aechmophorus occidentalis', 'Aegolius acadicus', 'Aeronautes saxatalis', 'Aimophila ruficeps', 'Aix sponsa', 'Alypia octomaculata', 'Ameiurus natalis', 'Ammospermophilus leucurus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_853942b2a729bb1925237ce1620e9da0.setContent(html_3326c92b064f09e74cc80b31b50de944);
+            
+        
+
+        marker_041217da2eb8d1a78359f785d417425b.bindPopup(popup_853942b2a729bb1925237ce1620e9da0)
+        ;
+
+        
+    
+    
+            var marker_2d88d6910e52f1c168029099d7ae6aef = L.marker(
+                [34.544444, -77.673056],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_f27d27afab19c29395cef763a642477e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_86c7c9b1508b508f538f6e1aa878ddef = $(`<div id="html_86c7c9b1508b508f538f6e1aa878ddef" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-19</td>           <td style='border: 1px solid'>1522052</td>           <td style='border: 1px solid'>31140.0</td>           <td style='border: 1px solid'>['Agkistrodon contortrix', 'Ardea herodias', 'Heterodon platirhinos', 'Lampropeltis elapsoides', 'Larus delawarensis', 'Leucophaeus atricilla', 'Necturus lewisi']</td>           <td style='border: 1px solid'>['Agkistrodon contortrix', 'Ardea herodias', 'Heterodon platirhinos', 'Lampropeltis elapsoides', 'Larus delawarensis', 'Leucophaeus atricilla', 'Necturus lewisi']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f27d27afab19c29395cef763a642477e.setContent(html_86c7c9b1508b508f538f6e1aa878ddef);
+            
+        
+
+        marker_2d88d6910e52f1c168029099d7ae6aef.bindPopup(popup_f27d27afab19c29395cef763a642477e)
+        ;
+
+        
+    
+    
+            var marker_c1c31d5f7fe8cde7b4f88e94e42bc79c = L.marker(
+                [37.566667, -103.8375],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_5a0dd36625444ee8147081666ff46fc6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6a405c371ff707286884d85680a07da = $(`<div id="html_e6a405c371ff707286884d85680a07da" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-05</td>           <td style='border: 1px solid'>1522057</td>           <td style='border: 1px solid'>35583.0</td>           <td style='border: 1px solid'>['Aechmophorus clarkii', 'Callipepla squamata', 'Larus delawarensis', 'Numenius americanus', 'Piranga rubra', 'Sitta carolinensis', 'Yvretta rhesus']</td>           <td style='border: 1px solid'>['Aechmophorus clarkii', 'Callipepla squamata', 'Larus delawarensis', 'Numenius americanus', 'Piranga rubra', 'Sitta carolinensis', 'Yvretta rhesus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_5a0dd36625444ee8147081666ff46fc6.setContent(html_e6a405c371ff707286884d85680a07da);
+            
+        
+
+        marker_c1c31d5f7fe8cde7b4f88e94e42bc79c.bindPopup(popup_5a0dd36625444ee8147081666ff46fc6)
+        ;
+
+        
+    
+    
+            var marker_bfe10fb4b0333ba217f4c1d209dd077f = L.marker(
+                [35.27527778, -101.80166667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_244557fb2124af0a2bca32d6d61c6deb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83ce3693150df7332505a655ab66112a = $(`<div id="html_83ce3693150df7332505a655ab66112a" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-02-27</td>           <td style='border: 1px solid'>1524533</td>           <td style='border: 1px solid'>24310.0</td>           <td style='border: 1px solid'>['Aimophila ruficeps', 'Aspidoscelis tesselatus', 'Baeolophus atricristatus', 'Bubulcus ibis', 'Capra hircus', 'Cardinalis cardinalis', 'Crotaphytus collaris', 'Geomys bursarius', 'Haemorhous mexicanus']</td>           <td style='border: 1px solid'>['Aimophila ruficeps', 'Aspidoscelis tesselatus', 'Baeolophus atricristatus', 'Bubulcus ibis', 'Capra hircus', 'Cardinalis cardinalis', 'Crotaphytus collaris', 'Geomys bursarius', 'Haemorhous mexicanus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_244557fb2124af0a2bca32d6d61c6deb.setContent(html_83ce3693150df7332505a655ab66112a);
+            
+        
+
+        marker_bfe10fb4b0333ba217f4c1d209dd077f.bindPopup(popup_244557fb2124af0a2bca32d6d61c6deb)
+        ;
+
+        
+    
+    
+            var marker_c788d599aecee3ae54da0e930ebc3ec1 = L.marker(
+                [33.97085185, -101.01125634],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_e8d3bf0420200fd6cf0efe06c2f053cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2dae81ad93bb788213795f065837ec1f = $(`<div id="html_2dae81ad93bb788213795f065837ec1f" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-02-27</td>           <td style='border: 1px solid'>1524536</td>           <td style='border: 1px solid'>41000.0</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Aix sponsa', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas platyrhynchos', 'Anas strepera', 'Branta canadensis', 'Branta hutchinsii']</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Aix sponsa', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas platyrhynchos', 'Anas strepera', 'Branta canadensis', 'Branta hutchinsii']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_e8d3bf0420200fd6cf0efe06c2f053cc.setContent(html_2dae81ad93bb788213795f065837ec1f);
+            
+        
+
+        marker_c788d599aecee3ae54da0e930ebc3ec1.bindPopup(popup_e8d3bf0420200fd6cf0efe06c2f053cc)
+        ;
+
+        
+    
+    
+            var marker_8b7b8c631e0490238e2128ab31cb2dd6 = L.marker(
+                [32.4241667, -102.2596667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_88c00cebd260caf59a8540d0d1314f76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc5a881e6982d5ee34f58d0bcc4b60df = $(`<div id="html_fc5a881e6982d5ee34f58d0bcc4b60df" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-02-27</td>           <td style='border: 1px solid'>1524542</td>           <td style='border: 1px solid'>65000.0</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Aechmophorus clarkii', 'Agelaius phoeniceus', 'Aix sponsa', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas discors', 'Anas platyrhynchos']</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Aechmophorus clarkii', 'Agelaius phoeniceus', 'Aix sponsa', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas discors', 'Anas platyrhynchos']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_88c00cebd260caf59a8540d0d1314f76.setContent(html_fc5a881e6982d5ee34f58d0bcc4b60df);
+            
+        
+
+        marker_8b7b8c631e0490238e2128ab31cb2dd6.bindPopup(popup_88c00cebd260caf59a8540d0d1314f76)
+        ;
+
+        
+    
+    
+            var marker_82043dd003e6bac8e7ad601a028d5f9c = L.marker(
+                [33.11793333, -100.325],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_4d7c95b82cb1c86e63b71c8b6393577c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c1054fb80eb93a9a8af6c1ae8da30ed = $(`<div id="html_0c1054fb80eb93a9a8af6c1ae8da30ed" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-06</td>           <td style='border: 1px solid'>1524919</td>           <td style='border: 1px solid'>122500.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Achatia mucens', 'Acmaeodera ornatoides', 'Acris blanchardi', 'Acrolophus griseus', 'Aculus tetanothrix', 'Aechmophorus clarkii']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Achatia mucens', 'Acmaeodera ornatoides', 'Acris blanchardi', 'Acrolophus griseus', 'Aculus tetanothrix', 'Aechmophorus clarkii']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_4d7c95b82cb1c86e63b71c8b6393577c.setContent(html_0c1054fb80eb93a9a8af6c1ae8da30ed);
+            
+        
+
+        marker_82043dd003e6bac8e7ad601a028d5f9c.bindPopup(popup_4d7c95b82cb1c86e63b71c8b6393577c)
+        ;
+
+        
+    
+    
+            var marker_d3f529feef0baf441c9d4fb28cafea62 = L.marker(
+                [33.246135, -101.381621],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_0467bd1b88373ab1035d27c1fdf134ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b264c9215a39a3215169063488639a26 = $(`<div id="html_b264c9215a39a3215169063488639a26" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-09</td>           <td style='border: 1px solid'>1524941</td>           <td style='border: 1px solid'>32000.0</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Aix sponsa', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas platyrhynchos', 'Anas strepera', 'Branta canadensis', 'Branta hutchinsii']</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Aix sponsa', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas platyrhynchos', 'Anas strepera', 'Branta canadensis', 'Branta hutchinsii']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_0467bd1b88373ab1035d27c1fdf134ea.setContent(html_b264c9215a39a3215169063488639a26);
+            
+        
+
+        marker_d3f529feef0baf441c9d4fb28cafea62.bindPopup(popup_0467bd1b88373ab1035d27c1fdf134ea)
+        ;
+
+        
+    
+    
+            var marker_a7d12ccd62f382d48d0fe2a74b2edf3a = L.marker(
+                [30.371712, -103.623445],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_a31ab81105d20decbd561d55731dfab2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14acb0f4bec22f1b353858f3c0f77096 = $(`<div id="html_14acb0f4bec22f1b353858f3c0f77096" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-09</td>           <td style='border: 1px solid'>1524942</td>           <td style='border: 1px solid'>41000.0</td>           <td style='border: 1px solid'>['Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus', 'Agelaius phoeniceus', 'Agrius cingulata']</td>           <td style='border: 1px solid'>['Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus', 'Agelaius phoeniceus', 'Agrius cingulata']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_a31ab81105d20decbd561d55731dfab2.setContent(html_14acb0f4bec22f1b353858f3c0f77096);
+            
+        
+
+        marker_a7d12ccd62f382d48d0fe2a74b2edf3a.bindPopup(popup_a31ab81105d20decbd561d55731dfab2)
+        ;
+
+        
+    
+    
+            var marker_b22ff21999401ae156dde83527d188f5 = L.marker(
+                [30.84951667, -104.04602222],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_847456733cb52c97d23021b4cf3dd1e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_753e3baac87370c32a88d330a5835c57 = $(`<div id="html_753e3baac87370c32a88d330a5835c57" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-09</td>           <td style='border: 1px solid'>1524944</td>           <td style='border: 1px solid'>314444.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Abudefduf saxatilis', 'Acalymma vittatum', 'Acanthepeira stellata', 'Acanthocephala terminalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Abudefduf saxatilis', 'Acalymma vittatum', 'Acanthepeira stellata', 'Acanthocephala terminalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_847456733cb52c97d23021b4cf3dd1e1.setContent(html_753e3baac87370c32a88d330a5835c57);
+            
+        
+
+        marker_b22ff21999401ae156dde83527d188f5.bindPopup(popup_847456733cb52c97d23021b4cf3dd1e1)
+        ;
+
+        
+    
+    
+            var marker_f35ba6250e8d602e6e1e8fad10c610c8 = L.marker(
+                [32.82916119, -98.48091254],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_78b8f2229ce82cef96cfec37432e5716 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9daed8877ca729703126f471dce7b91 = $(`<div id="html_c9daed8877ca729703126f471dce7b91" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-09</td>           <td style='border: 1px solid'>1524946</td>           <td style='border: 1px solid'>126734.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Acmaeodera ornatoides', 'Acris blanchardi', 'Acrolophus griseus', 'Actitis macularius']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Acmaeodera ornatoides', 'Acris blanchardi', 'Acrolophus griseus', 'Actitis macularius']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_78b8f2229ce82cef96cfec37432e5716.setContent(html_c9daed8877ca729703126f471dce7b91);
+            
+        
+
+        marker_f35ba6250e8d602e6e1e8fad10c610c8.bindPopup(popup_78b8f2229ce82cef96cfec37432e5716)
+        ;
+
+        
+    
+    
+            var marker_95678b4cec420f01fadd66205af0b263 = L.marker(
+                [31.80032466, -100.61417269],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_f8ba0ff956ee86a926087f0431c91c42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8633cdaee607fc5d4d2b17a3e37b1aac = $(`<div id="html_8633cdaee607fc5d4d2b17a3e37b1aac" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-10</td>           <td style='border: 1px solid'>1524967</td>           <td style='border: 1px solid'>158308.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Achyra rantalis', 'Acmaeodera ornatoides', 'Acontia candefacta', 'Acontia cretata']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Achyra rantalis', 'Acmaeodera ornatoides', 'Acontia candefacta', 'Acontia cretata']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f8ba0ff956ee86a926087f0431c91c42.setContent(html_8633cdaee607fc5d4d2b17a3e37b1aac);
+            
+        
+
+        marker_95678b4cec420f01fadd66205af0b263.bindPopup(popup_f8ba0ff956ee86a926087f0431c91c42)
+        ;
+
+        
+    
+    
+            var marker_82210ae7a74d802170e8b47cb3728a96 = L.marker(
+                [31.49435155, -100.67040164],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_002d0461ec704a6e59071ca2513f6641 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dfb486a03a6787d638de58b316c18fb6 = $(`<div id="html_dfb486a03a6787d638de58b316c18fb6" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-10</td>           <td style='border: 1px solid'>1524968</td>           <td style='border: 1px solid'>12659.0</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Anas discors', 'Butorides virescens', 'Himantopus mexicanus', 'Larus delawarensis', 'Pandion haliaetus', 'Pelecanus erythrorhynchos', 'Phalaropus tricolor', 'Recurvirostra americana']</td>           <td style='border: 1px solid'>['Accipiter cooperii', 'Anas discors', 'Butorides virescens', 'Himantopus mexicanus', 'Larus delawarensis', 'Pandion haliaetus', 'Pelecanus erythrorhynchos', 'Phalaropus tricolor', 'Recurvirostra americana']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_002d0461ec704a6e59071ca2513f6641.setContent(html_dfb486a03a6787d638de58b316c18fb6);
+            
+        
+
+        marker_82210ae7a74d802170e8b47cb3728a96.bindPopup(popup_002d0461ec704a6e59071ca2513f6641)
+        ;
+
+        
+    
+    
+            var marker_353be8801eb6fe84e37f2be1105876ba = L.marker(
+                [32.98708333, -100.81845],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_205e0f987a13b9b3c1a29b71ed56e124 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c39abf9339fb8e059e5d5dd4a9f0cce = $(`<div id="html_2c39abf9339fb8e059e5d5dd4a9f0cce" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-11</td>           <td style='border: 1px solid'>1524972</td>           <td style='border: 1px solid'>162625.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Achyra rantalis', 'Acmaeodera ornatoides', 'Acontia candefacta', 'Acontia cretata']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Achyra rantalis', 'Acmaeodera ornatoides', 'Acontia candefacta', 'Acontia cretata']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_205e0f987a13b9b3c1a29b71ed56e124.setContent(html_2c39abf9339fb8e059e5d5dd4a9f0cce);
+            
+        
+
+        marker_353be8801eb6fe84e37f2be1105876ba.bindPopup(popup_205e0f987a13b9b3c1a29b71ed56e124)
+        ;
+
+        
+    
+    
+            var marker_33665ef5ac19d64c1da7766a4bf13c2a = L.marker(
+                [30.77548508, -101.97604985],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_ba7b45e8a9f1a331037a6442003db620 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a5c615b2afe04c7c3c3fdd40a892622 = $(`<div id="html_7a5c615b2afe04c7c3c3fdd40a892622" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-11</td>           <td style='border: 1px solid'>1524976</td>           <td style='border: 1px solid'>63427.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_ba7b45e8a9f1a331037a6442003db620.setContent(html_7a5c615b2afe04c7c3c3fdd40a892622);
+            
+        
+
+        marker_33665ef5ac19d64c1da7766a4bf13c2a.bindPopup(popup_ba7b45e8a9f1a331037a6442003db620)
+        ;
+
+        
+    
+    
+            var marker_74602e480220ff25039217bb1eac27be = L.marker(
+                [33.89225, -98.640925],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_f1d330b71c3d5d48f1a6a8ab2a4f52fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ccb1e5167bb84712607fe79a32d06b1 = $(`<div id="html_1ccb1e5167bb84712607fe79a32d06b1" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-15</td>           <td style='border: 1px solid'>1525007</td>           <td style='border: 1px solid'>11785.0</td>           <td style='border: 1px solid'>['Anas platyrhynchos', 'Charadrius vociferus', 'Didelphis virginiana', 'Grus canadensis', 'Lithobates catesbeianus', 'Papilio glaucus', 'Phalacrocorax auritus', 'Sturnella neglecta', 'Toxostoma rufum']</td>           <td style='border: 1px solid'>['Anas platyrhynchos', 'Charadrius vociferus', 'Didelphis virginiana', 'Grus canadensis', 'Lithobates catesbeianus', 'Papilio glaucus', 'Phalacrocorax auritus', 'Sturnella neglecta', 'Toxostoma rufum']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f1d330b71c3d5d48f1a6a8ab2a4f52fd.setContent(html_1ccb1e5167bb84712607fe79a32d06b1);
+            
+        
+
+        marker_74602e480220ff25039217bb1eac27be.bindPopup(popup_f1d330b71c3d5d48f1a6a8ab2a4f52fd)
+        ;
+
+        
+    
+    
+            var marker_2fa8e3ae5876fc29af6887b7b82b355f = L.marker(
+                [30.1635, -101.24716666],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_541f3383aca4fa98efa46da3357faddc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44dfcd0a7c46d73523f5d6c620c17812 = $(`<div id="html_44dfcd0a7c46d73523f5d6c620c17812" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-25</td>           <td style='border: 1px solid'>1525143</td>           <td style='border: 1px solid'>175000.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Abudefduf saxatilis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Achyra rantalis', 'Acmaeodera ornatoides', 'Acontia candefacta']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Abrostola microvalis', 'Abudefduf saxatilis', 'Accipiter cooperii', 'Accipiter striatus', 'Achatia mucens', 'Achyra rantalis', 'Acmaeodera ornatoides', 'Acontia candefacta']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_541f3383aca4fa98efa46da3357faddc.setContent(html_44dfcd0a7c46d73523f5d6c620c17812);
+            
+        
+
+        marker_2fa8e3ae5876fc29af6887b7b82b355f.bindPopup(popup_541f3383aca4fa98efa46da3357faddc)
+        ;
+
+        
+    
+    
+            var marker_61f0f6cb685ab18ab0fdbe79911660a7 = L.marker(
+                [33.60996575, -100.69241222],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_9227523b7148cff464f7d9619e4665f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b42bb6ae65e976f92eac9fb03a8fbd91 = $(`<div id="html_b42bb6ae65e976f92eac9fb03a8fbd91" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-06</td>           <td style='border: 1px solid'>1525230</td>           <td style='border: 1px solid'>89200.0</td>           <td style='border: 1px solid'>['Acris blanchardi', 'Agelaius phoeniceus', 'Aimophila ruficeps', 'Aix sponsa', 'Amblyomma americanum', 'Anaea andria', 'Anas americana', 'Anas clypeata', 'Anas crecca']</td>           <td style='border: 1px solid'>['Acris blanchardi', 'Agelaius phoeniceus', 'Aimophila ruficeps', 'Aix sponsa', 'Amblyomma americanum', 'Anaea andria', 'Anas americana', 'Anas clypeata', 'Anas crecca']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_9227523b7148cff464f7d9619e4665f9.setContent(html_b42bb6ae65e976f92eac9fb03a8fbd91);
+            
+        
+
+        marker_61f0f6cb685ab18ab0fdbe79911660a7.bindPopup(popup_9227523b7148cff464f7d9619e4665f9)
+        ;
+
+        
+    
+    
+            var marker_ab8bd652e11579a9f4967b86140771b3 = L.marker(
+                [30.23763124, -102.97613013],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_dfdc289c90c74e70ba78121baffd9c1c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53bba842c77d04dfd31502bde8abf4be = $(`<div id="html_53bba842c77d04dfd31502bde8abf4be" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-07</td>           <td style='border: 1px solid'>1525235</td>           <td style='border: 1px solid'>83995.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus', 'Agelaius phoeniceus']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus', 'Agelaius phoeniceus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_dfdc289c90c74e70ba78121baffd9c1c.setContent(html_53bba842c77d04dfd31502bde8abf4be);
+            
+        
+
+        marker_ab8bd652e11579a9f4967b86140771b3.bindPopup(popup_dfdc289c90c74e70ba78121baffd9c1c)
+        ;
+
+        
+    
+    
+            var marker_62ab0349f2af9ccbb4b65874150cd997 = L.marker(
+                [30.44812428, -103.16282763],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_5a2f51cc43a39b0a671f0ceb60f8eb53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_300f612fa8ad1bccb66a089b8000b3df = $(`<div id="html_300f612fa8ad1bccb66a089b8000b3df" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-09</td>           <td style='border: 1px solid'>1525251</td>           <td style='border: 1px solid'>87401.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus', 'Agelaius phoeniceus']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus', 'Agelaius phoeniceus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_5a2f51cc43a39b0a671f0ceb60f8eb53.setContent(html_300f612fa8ad1bccb66a089b8000b3df);
+            
+        
+
+        marker_62ab0349f2af9ccbb4b65874150cd997.bindPopup(popup_5a2f51cc43a39b0a671f0ceb60f8eb53)
+        ;
+
+        
+    
+    
+            var marker_fd1f7859331bafc099f5e65e7d824975 = L.marker(
+                [32.26772, -102.2480467],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_63c24713bfd33621541f91328f42d394 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a067f18bd33d1e227cf57f2b68102e4 = $(`<div id="html_6a067f18bd33d1e227cf57f2b68102e4" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-24</td>           <td style='border: 1px solid'>1525316</td>           <td style='border: 1px solid'>25000.0</td>           <td style='border: 1px solid'>['Crotalus atrox', 'Dendrocygna autumnalis', 'Hyles lineata', 'Phrynosoma cornutum']</td>           <td style='border: 1px solid'>['Crotalus atrox', 'Dendrocygna autumnalis', 'Hyles lineata', 'Phrynosoma cornutum']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_63c24713bfd33621541f91328f42d394.setContent(html_6a067f18bd33d1e227cf57f2b68102e4);
+            
+        
+
+        marker_fd1f7859331bafc099f5e65e7d824975.bindPopup(popup_63c24713bfd33621541f91328f42d394)
+        ;
+
+        
+    
+    
+            var marker_262eede5502a18d53ba6622ebafed9b0 = L.marker(
+                [34.95088333, -101.85331667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_31671be5e342e604da900e59787b314e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bcce7d1310107b8d346795552a34d20 = $(`<div id="html_8bcce7d1310107b8d346795552a34d20" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-05-24</td>           <td style='border: 1px solid'>1525326</td>           <td style='border: 1px solid'>16803.0</td>           <td style='border: 1px solid'>['Aimophila ruficeps', 'Aspidoscelis tesselatus', 'Baeolophus atricristatus', 'Bubulcus ibis', 'Capra hircus', 'Cardinalis cardinalis', 'Crotaphytus collaris', 'Geomys bursarius', 'Haemorhous mexicanus']</td>           <td style='border: 1px solid'>['Aimophila ruficeps', 'Aspidoscelis tesselatus', 'Baeolophus atricristatus', 'Bubulcus ibis', 'Capra hircus', 'Cardinalis cardinalis', 'Crotaphytus collaris', 'Geomys bursarius', 'Haemorhous mexicanus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_31671be5e342e604da900e59787b314e.setContent(html_8bcce7d1310107b8d346795552a34d20);
+            
+        
+
+        marker_262eede5502a18d53ba6622ebafed9b0.bindPopup(popup_31671be5e342e604da900e59787b314e)
+        ;
+
+        
+    
+    
+            var marker_34b160b34276e9b4867a80a0aab04a77 = L.marker(
+                [30.63458481, -104.10336206],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_456e14f236b6ca1c4c830b504c680ba9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_def02d21b78b1bc8f3179a4647d7d258 = $(`<div id="html_def02d21b78b1bc8f3179a4647d7d258" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-02</td>           <td style='border: 1px solid'>1525401</td>           <td style='border: 1px solid'>12311.0</td>           <td style='border: 1px solid'>['Archilochus alexandri', 'Baeolophus atricristatus', 'Campylorhynchus brunneicapillus', 'Canis latrans', 'Cathartes aura', 'Cervus elaphus', 'Dryobates scalaris', 'Melozone fusca', 'Pecari tajacu']</td>           <td style='border: 1px solid'>['Archilochus alexandri', 'Baeolophus atricristatus', 'Campylorhynchus brunneicapillus', 'Canis latrans', 'Cathartes aura', 'Cervus elaphus', 'Dryobates scalaris', 'Melozone fusca', 'Pecari tajacu']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_456e14f236b6ca1c4c830b504c680ba9.setContent(html_def02d21b78b1bc8f3179a4647d7d258);
+            
+        
+
+        marker_34b160b34276e9b4867a80a0aab04a77.bindPopup(popup_456e14f236b6ca1c4c830b504c680ba9)
+        ;
+
+        
+    
+    
+            var marker_fcee6a60d38092c8a52f56b3545f7b94 = L.marker(
+                [31.9041149, -100.77949498],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_9dbadff93677b992039b8684964d355a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57d89b9b97bd5a2aa90d47d0d4592bba = $(`<div id="html_57d89b9b97bd5a2aa90d47d0d4592bba" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-08</td>           <td style='border: 1px solid'>1525498</td>           <td style='border: 1px solid'>19391.0</td>           <td style='border: 1px solid'>['Calidris mauri', 'Sceloporus olivaceus']</td>           <td style='border: 1px solid'>['Calidris mauri', 'Sceloporus olivaceus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_9dbadff93677b992039b8684964d355a.setContent(html_57d89b9b97bd5a2aa90d47d0d4592bba);
+            
+        
+
+        marker_fcee6a60d38092c8a52f56b3545f7b94.bindPopup(popup_9dbadff93677b992039b8684964d355a)
+        ;
+
+        
+    
+    
+            var marker_1ff2bc5ddf9d7505a1bb59bea8c6f1a7 = L.marker(
+                [34.05118333, -100.50146667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_3dcab9d9215571cc4cf942e7ce036904 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c650d3112fcd131fdb46dcd7dbd26d5f = $(`<div id="html_c650d3112fcd131fdb46dcd7dbd26d5f" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-11</td>           <td style='border: 1px solid'>1525543</td>           <td style='border: 1px solid'>29200.0</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Cicindela scutellaris', 'Cicindela tranquebarica', 'Elanus leucurus', 'Erethizon dorsatus', 'Masticophis flagellum', 'Melanerpes aurifrons', 'Phrynosoma cornutum', 'Spinus tristis']</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Cicindela scutellaris', 'Cicindela tranquebarica', 'Elanus leucurus', 'Erethizon dorsatus', 'Masticophis flagellum', 'Melanerpes aurifrons', 'Phrynosoma cornutum', 'Spinus tristis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_3dcab9d9215571cc4cf942e7ce036904.setContent(html_c650d3112fcd131fdb46dcd7dbd26d5f);
+            
+        
+
+        marker_1ff2bc5ddf9d7505a1bb59bea8c6f1a7.bindPopup(popup_3dcab9d9215571cc4cf942e7ce036904)
+        ;
+
+        
+    
+    
+            var marker_99390065e63e73648559deee0f2a2ef7 = L.marker(
+                [31.00662583, -94.97748583],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_e2ba76c904069feb6924d297a0ede6f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d01a04709cb60ee9b928f9bd1d9d8569 = $(`<div id="html_d01a04709cb60ee9b928f9bd1d9d8569" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-17</td>           <td style='border: 1px solid'>1525623</td>           <td style='border: 1px solid'>20222.0</td>           <td style='border: 1px solid'>['Anolis carolinensis', 'Enallagma vesperum', 'Libellula deplanata', 'Lontra canadensis', 'Micrurus tener']</td>           <td style='border: 1px solid'>['Anolis carolinensis', 'Enallagma vesperum', 'Libellula deplanata', 'Lontra canadensis', 'Micrurus tener']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_e2ba76c904069feb6924d297a0ede6f6.setContent(html_d01a04709cb60ee9b928f9bd1d9d8569);
+            
+        
+
+        marker_99390065e63e73648559deee0f2a2ef7.bindPopup(popup_e2ba76c904069feb6924d297a0ede6f6)
+        ;
+
+        
+    
+    
+            var marker_e77d47292173ccceffad7842a37dee64 = L.marker(
+                [27.1525, -98.35527778],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_822bde7c7767f23658eafa97859df6ef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3164de9d09c6d1f79031f20e10bbcf2e = $(`<div id="html_3164de9d09c6d1f79031f20e10bbcf2e" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-18</td>           <td style='border: 1px solid'>1525635</td>           <td style='border: 1px solid'>30000.0</td>           <td style='border: 1px solid'>['Anhinga anhinga', 'Anthocharis midea', 'Archilochus alexandri', 'Arizona elegans', 'Baeolophus atricristatus', 'Bartramia longicauda', 'Buteo swainsoni', 'Cairina moschata', 'Cardinalis cardinalis']</td>           <td style='border: 1px solid'>['Anhinga anhinga', 'Anthocharis midea', 'Archilochus alexandri', 'Arizona elegans', 'Baeolophus atricristatus', 'Bartramia longicauda', 'Buteo swainsoni', 'Cairina moschata', 'Cardinalis cardinalis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_822bde7c7767f23658eafa97859df6ef.setContent(html_3164de9d09c6d1f79031f20e10bbcf2e);
+            
+        
+
+        marker_e77d47292173ccceffad7842a37dee64.bindPopup(popup_822bde7c7767f23658eafa97859df6ef)
+        ;
+
+        
+    
+    
+            var marker_934223e1828497030a97393148a8bb00 = L.marker(
+                [30.99516667, -94.11666667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_8518972624080d169381c2034e9d1031 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eda50d8cd46648664a3313e9a3e1a935 = $(`<div id="html_eda50d8cd46648664a3313e9a3e1a935" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-18</td>           <td style='border: 1px solid'>1525638</td>           <td style='border: 1px solid'>4197.0</td>           <td style='border: 1px solid'>['Basiaeschna janata', 'Calopteryx dimidiata', 'Calopteryx maculata', 'Cordulegaster sarracenia', 'Dolomedes vittatus', 'Gomphaeschna furcillata', 'Helocordulia selysii', 'Hylogomphus apomyius', 'Ischnura posita']</td>           <td style='border: 1px solid'>['Basiaeschna janata', 'Calopteryx dimidiata', 'Calopteryx maculata', 'Cordulegaster sarracenia', 'Dolomedes vittatus', 'Gomphaeschna furcillata', 'Helocordulia selysii', 'Hylogomphus apomyius', 'Ischnura posita']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_8518972624080d169381c2034e9d1031.setContent(html_eda50d8cd46648664a3313e9a3e1a935);
+            
+        
+
+        marker_934223e1828497030a97393148a8bb00.bindPopup(popup_8518972624080d169381c2034e9d1031)
+        ;
+
+        
+    
+    
+            var marker_381cfb7f2ec5d4579afa88818b627eb9 = L.marker(
+                [30.30546667, -95.91633333],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_accbab172ea91fbf2ee34e34fa829abc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b6d6f4173c5251b0ddf02428fa940ff = $(`<div id="html_5b6d6f4173c5251b0ddf02428fa940ff" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-19</td>           <td style='border: 1px solid'>1525682</td>           <td style='border: 1px solid'>5280.0</td>           <td style='border: 1px solid'>['Agkistrodon contortrix', 'Trachemys scripta']</td>           <td style='border: 1px solid'>['Agkistrodon contortrix', 'Trachemys scripta']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_accbab172ea91fbf2ee34e34fa829abc.setContent(html_5b6d6f4173c5251b0ddf02428fa940ff);
+            
+        
+
+        marker_381cfb7f2ec5d4579afa88818b627eb9.bindPopup(popup_accbab172ea91fbf2ee34e34fa829abc)
+        ;
+
+        
+    
+    
+            var marker_5fe35721f933c6abe483eb9406456540 = L.marker(
+                [32.0782, -100.46018333],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_61b2b4e5e0d73e61e74d9c2a4c589590 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d24dcc59bc98ecfeddb204999b68129 = $(`<div id="html_7d24dcc59bc98ecfeddb204999b68129" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-20</td>           <td style='border: 1px solid'>1525701</td>           <td style='border: 1px solid'>72473.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Agelaius phoeniceus', 'Aix sponsa', 'Amphispiza bilineata', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas discors']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Agelaius phoeniceus', 'Aix sponsa', 'Amphispiza bilineata', 'Anas americana', 'Anas clypeata', 'Anas crecca', 'Anas discors']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_61b2b4e5e0d73e61e74d9c2a4c589590.setContent(html_7d24dcc59bc98ecfeddb204999b68129);
+            
+        
+
+        marker_5fe35721f933c6abe483eb9406456540.bindPopup(popup_61b2b4e5e0d73e61e74d9c2a4c589590)
+        ;
+
+        
+    
+    
+            var marker_c8ca0d6b01f97410e307b8485e1e0212 = L.marker(
+                [29.78583333, -96.45416667],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_d1eb23785b9c4d3fbc5724d7141d17af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3b3ed270ec2253d66cb81f542f33034 = $(`<div id="html_e3b3ed270ec2253d66cb81f542f33034" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-04</td>           <td style='border: 1px solid'>1526799</td>           <td style='border: 1px solid'>3085.0</td>           <td style='border: 1px solid'>['Crotalus horridus']</td>           <td style='border: 1px solid'>['Crotalus horridus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_d1eb23785b9c4d3fbc5724d7141d17af.setContent(html_e3b3ed270ec2253d66cb81f542f33034);
+            
+        
+
+        marker_c8ca0d6b01f97410e307b8485e1e0212.bindPopup(popup_d1eb23785b9c4d3fbc5724d7141d17af)
+        ;
+
+        
+    
+    
+            var marker_f81dcf601070ff8f6d01b3c73050baa4 = L.marker(
+                [32.9731333, -94.4307],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_9c894d1aa6352bbaf1536780fbcc1767 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_142bdeca85cd7bcd6813534a01c7ee4f = $(`<div id="html_142bdeca85cd7bcd6813534a01c7ee4f" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-04</td>           <td style='border: 1px solid'>1526801</td>           <td style='border: 1px solid'>41050.0</td>           <td style='border: 1px solid'>['Actitis macularius', 'Agkistrodon contortrix', 'Agkistrodon piscivorus', 'Aix sponsa', 'Ammodramus savannarum', 'Anas acuta', 'Anas crecca', 'Anas cyanoptera', 'Anas discors']</td>           <td style='border: 1px solid'>['Actitis macularius', 'Agkistrodon contortrix', 'Agkistrodon piscivorus', 'Aix sponsa', 'Ammodramus savannarum', 'Anas acuta', 'Anas crecca', 'Anas cyanoptera', 'Anas discors']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_9c894d1aa6352bbaf1536780fbcc1767.setContent(html_142bdeca85cd7bcd6813534a01c7ee4f);
+            
+        
+
+        marker_f81dcf601070ff8f6d01b3c73050baa4.bindPopup(popup_9c894d1aa6352bbaf1536780fbcc1767)
+        ;
+
+        
+    
+    
+            var marker_c28bafeac1e5c6b13de8fbdf8a379d40 = L.marker(
+                [30.3857833, -98.08505],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_6ae9ae618d633e9337ba69f011ed91df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_859eb3916dfc72407b9ac40a924564ad = $(`<div id="html_859eb3916dfc72407b9ac40a924564ad" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-04</td>           <td style='border: 1px solid'>1526807</td>           <td style='border: 1px solid'>6500.0</td>           <td style='border: 1px solid'>['Aphelocoma woodhouseii', 'Cophosaurus texanus', 'Scolopendra heros', 'Spinus psaltria', 'Spizella pusilla', 'Strategus aloeus', 'Thamnophis cyrtopsis', 'Thamnophis proximus']</td>           <td style='border: 1px solid'>['Aphelocoma woodhouseii', 'Cophosaurus texanus', 'Scolopendra heros', 'Spinus psaltria', 'Spizella pusilla', 'Strategus aloeus', 'Thamnophis cyrtopsis', 'Thamnophis proximus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_6ae9ae618d633e9337ba69f011ed91df.setContent(html_859eb3916dfc72407b9ac40a924564ad);
+            
+        
+
+        marker_c28bafeac1e5c6b13de8fbdf8a379d40.bindPopup(popup_6ae9ae618d633e9337ba69f011ed91df)
+        ;
+
+        
+    
+    
+            var marker_7be0a67936ee458e15cb303223ba954f = L.marker(
+                [30.22777389, -97.211651],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_68c86dc65225216c76b5e20747422fd9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09217ae546b1d2173d8de42c3dbeab07 = $(`<div id="html_09217ae546b1d2173d8de42c3dbeab07" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-04</td>           <td style='border: 1px solid'>1526822</td>           <td style='border: 1px solid'>34068.0</td>           <td style='border: 1px solid'>['Abrostola microvalis', 'Accipiter cooperii', 'Achatia mucens', 'Acmaeodera ornatoides', 'Acrolophus griseus', 'Agelaius phoeniceus', 'Agkistrodon laticinctus', 'Aix sponsa', 'Alligator mississippiensis']</td>           <td style='border: 1px solid'>['Abrostola microvalis', 'Accipiter cooperii', 'Achatia mucens', 'Acmaeodera ornatoides', 'Acrolophus griseus', 'Agelaius phoeniceus', 'Agkistrodon laticinctus', 'Aix sponsa', 'Alligator mississippiensis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_68c86dc65225216c76b5e20747422fd9.setContent(html_09217ae546b1d2173d8de42c3dbeab07);
+            
+        
+
+        marker_7be0a67936ee458e15cb303223ba954f.bindPopup(popup_68c86dc65225216c76b5e20747422fd9)
+        ;
+
+        
+    
+    
+            var marker_b477b7fd5cfaa3b51131f515b2cc43b3 = L.marker(
+                [30.27001667, -95.8179],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_8fa59085c1ef6e156112ead2204d3530 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_360a6b6b9e0cf956c017ccb283a33fdc = $(`<div id="html_360a6b6b9e0cf956c017ccb283a33fdc" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-09-05</td>           <td style='border: 1px solid'>1526851</td>           <td style='border: 1px solid'>19960.0</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Agkistrodon contortrix', 'Alligator mississippiensis', 'Ambystoma texanum', 'Anas acuta', 'Anolis carolinensis', 'Anthanassa texana', 'Anthrenus verbasci', 'Argia apicalis']</td>           <td style='border: 1px solid'>['Agelaius phoeniceus', 'Agkistrodon contortrix', 'Alligator mississippiensis', 'Ambystoma texanum', 'Anas acuta', 'Anolis carolinensis', 'Anthanassa texana', 'Anthrenus verbasci', 'Argia apicalis']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_8fa59085c1ef6e156112ead2204d3530.setContent(html_360a6b6b9e0cf956c017ccb283a33fdc);
+            
+        
+
+        marker_b477b7fd5cfaa3b51131f515b2cc43b3.bindPopup(popup_8fa59085c1ef6e156112ead2204d3530)
+        ;
+
+        
+    
+    
+            var marker_f87fc690106ac631723001d3066d4acf = L.marker(
+                [32.3689, -102.5242],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_11d9e14ad92ea71febe4738753add098 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea890a94139dbc4a3bf234c37ec9dfef = $(`<div id="html_ea890a94139dbc4a3bf234c37ec9dfef" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-06-12</td>           <td style='border: 1px solid'>1556281</td>           <td style='border: 1px solid'>24000.0</td>           <td style='border: 1px solid'>['Crotalus atrox', 'Dendrocygna autumnalis', 'Hyles lineata', 'Phrynosoma cornutum']</td>           <td style='border: 1px solid'>['Crotalus atrox', 'Dendrocygna autumnalis', 'Hyles lineata', 'Phrynosoma cornutum']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_11d9e14ad92ea71febe4738753add098.setContent(html_ea890a94139dbc4a3bf234c37ec9dfef);
+            
+        
+
+        marker_f87fc690106ac631723001d3066d4acf.bindPopup(popup_11d9e14ad92ea71febe4738753add098)
+        ;
+
+        
+    
+    
+            var marker_a3446025700728392f26c044e6035250 = L.marker(
+                [32.591877, -102.460985],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_d9d12f6abca7abda9a666466cac6c457 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15c6978ddb084a2ab321766d9ad34e6d = $(`<div id="html_15c6978ddb084a2ab321766d9ad34e6d" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-11-05</td>           <td style='border: 1px solid'>1563168</td>           <td style='border: 1px solid'>9500.0</td>           <td style='border: 1px solid'>['Crotalus atrox', 'Hyles lineata', 'Phrynosoma cornutum']</td>           <td style='border: 1px solid'>['Crotalus atrox', 'Hyles lineata', 'Phrynosoma cornutum']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_d9d12f6abca7abda9a666466cac6c457.setContent(html_15c6978ddb084a2ab321766d9ad34e6d);
+            
+        
+
+        marker_a3446025700728392f26c044e6035250.bindPopup(popup_d9d12f6abca7abda9a666466cac6c457)
+        ;
+
+        
+    
+    
+            var marker_04cb4eb8a0aecab77dcb450019d148fb = L.marker(
+                [32.23739634, -102.91733639],
+                {}
+            ).addTo(map_1cbbc8877bb34b65bf0d5bd7f1592ef6);
+        
+    
+        var popup_77b5ae4ad2fc0bb9f0b2276928d936e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b37a5390192450f756474c3637373ca = $(`<div id="html_7b37a5390192450f756474c3637373ca" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2011-04-14</td>           <td style='border: 1px solid'>1635061</td>           <td style='border: 1px solid'>106027.0</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus']</td>           <td style='border: 1px solid'>['Abaeis nicippe', 'Accipiter cooperii', 'Achyra rantalis', 'Acontia candefacta', 'Acontia cretata', 'Acontia quadriplaga', 'Acontia semiflava', 'Aechmophorus clarkii', 'Aeorestes cinereus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_77b5ae4ad2fc0bb9f0b2276928d936e2.setContent(html_7b37a5390192450f756474c3637373ca);
+            
+        
+
+        marker_04cb4eb8a0aecab77dcb450019d148fb.bindPopup(popup_77b5ae4ad2fc0bb9f0b2276928d936e2)
+        ;
+
+        
+    
+</script>
+</html>

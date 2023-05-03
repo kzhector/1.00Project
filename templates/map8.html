@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_104cbbb166ccb16383c9647a0e6ef107 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_104cbbb166ccb16383c9647a0e6ef107" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_104cbbb166ccb16383c9647a0e6ef107 = L.map(
+                "map_104cbbb166ccb16383c9647a0e6ef107",
+                {
+                    center: [42.0, -102.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4.4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_36b3f9c0eed7392c311e83e1ecedf748 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_104cbbb166ccb16383c9647a0e6ef107);
+        
+    
+            var marker_2d97e1f7f3e446b7ebc9533ebd13aaef = L.marker(
+                [26.09055556, -81.5425],
+                {}
+            ).addTo(map_104cbbb166ccb16383c9647a0e6ef107);
+        
+    
+        var popup_c1703614bd38a4773f2d48ef63e754d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_438e9c4d8b08529002dc69ae663baed3 = $(`<div id="html_438e9c4d8b08529002dc69ae663baed3" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2000-04-09</td>           <td style='border: 1px solid'>363814</td>           <td style='border: 1px solid'>16500.0</td>           <td style='border: 1px solid'>['Astronotus ocellatus', 'Dumetella carolinensis', 'Lepidochelys kempii', 'Lepisosteus platyrhincus', 'Lontra canadensis', 'Nycticorax nycticorax', 'Pandion haliaetus', 'Pelecanus erythrorhynchos', 'Phalacrocorax auritus']</td>           <td style='border: 1px solid'>['Astronotus ocellatus', 'Dumetella carolinensis', 'Lepidochelys kempii', 'Lepisosteus platyrhincus', 'Lontra canadensis', 'Nycticorax nycticorax', 'Pandion haliaetus', 'Pelecanus erythrorhynchos', 'Phalacrocorax auritus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_c1703614bd38a4773f2d48ef63e754d8.setContent(html_438e9c4d8b08529002dc69ae663baed3);
+            
+        
+
+        marker_2d97e1f7f3e446b7ebc9533ebd13aaef.bindPopup(popup_c1703614bd38a4773f2d48ef63e754d8)
+        ;
+
+        
+    
+    
+            var marker_c6b75072db33c8f1e71d5c067f4b3225 = L.marker(
+                [46.57194444, -119.77277778],
+                {}
+            ).addTo(map_104cbbb166ccb16383c9647a0e6ef107);
+        
+    
+        var popup_f7acc66b2f76fbc10a3c6b200b24f808 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fea72c40428f30f96b287791842e2d9a = $(`<div id="html_fea72c40428f30f96b287791842e2d9a" style="width: 100.0%; height: 100.0%;">      <table style='width:100%'>       <table style='border: 1px solid'>         <tr>           <th style='border: 1px solid'>Date</th>           <th style='border: 1px solid'>FOD ID</th>           <th style='border: 1px solid'>Acres Burned</th>           <th style='border: 1px solid'>Top 10 Species Present Before</th>           <th style='border: 1px solid'>Top 10 Species Present After</th>           <th style='border: 1px solid'>Difference</th>         </tr>         <tr>           <td style='border: 1px solid'>2000-06-28</td>           <td style='border: 1px solid'>364479</td>           <td style='border: 1px solid'>163884.0</td>           <td style='border: 1px solid'>['Araneus diadematus', 'Athene cunicularia', 'Bombycilla cedrorum', 'Cleistocybe vernalis', 'Corvus brachyrhynchos', 'Dendraster excentricus', 'Elkalyce comyntas', 'Gallinago delicata', 'Glaucopsyche lygdamus']</td>           <td style='border: 1px solid'>['Araneus diadematus', 'Athene cunicularia', 'Bombycilla cedrorum', 'Cleistocybe vernalis', 'Corvus brachyrhynchos', 'Dendraster excentricus', 'Elkalyce comyntas', 'Gallinago delicata', 'Glaucopsyche lygdamus']</td>           <td style='border: 1px solid'>0</td>         </tr>       </table>       </div>`)[0];
+                popup_f7acc66b2f76fbc10a3c6b200b24f808.setContent(html_fea72c40428f30f96b287791842e2d9a);
+            
+        
+
+        marker_c6b75072db33c8f1e71d5c067f4b3225.bindPopup(popup_f7acc66b2f76fbc10a3c6b200b24f808)
+        ;
+
+        
+    
+</script>
+</html>
