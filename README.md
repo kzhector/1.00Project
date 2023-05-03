@@ -5,4 +5,4 @@ For launching the server, I used Flask on my local device, so you will have to i
 While you do not need the datasets to launch the maps on the server, you can still find the datasets linked on the website on the server if you would like to see the raw data. Since all of the datasets are so large, if you would like to look at the data, I would recommend putting the data in your drive for easy access as well as conserving storage space on your device
 
 # Link to Video
-[I'm an inline-style link with title](https://youtu.be/brCKjvrXIA8 "Video")
+[Deliverable 3](https://youtu.be/brCKjvrXIA8 "Video")
