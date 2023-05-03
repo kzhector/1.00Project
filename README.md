@@ -9,10 +9,10 @@ While you do not need the datasets to launch the maps on the server, you can sti
 
 # Links to the Data in Google Drive
 [Analyzed By Year Data](https://drive.google.com/drive/folders/13IVJf2LPDbW-bJB4seMvvPbBAyyU3Pi6?usp=share_link)
-[Pre Fire Season](https://drive.google.com/drive/folders/17JwzNelWULmq6LGnPr0iJ6mNggQ1dIg7?usp=sharing) 
-[Biodiversity Data](https://drive.google.com/drive/folders/17Z5gZNE-rXwYgMv9LkP9C7VBF4MZpFGW?usp=sharing) 
-[Shortened_Data](https://drive.google.com/drive/folders/1CGOuUdZoV8LBLmq1fms3AwvKhutOGaEB?usp=sharing) 
-[Fire Data](https://drive.google.com/file/d/1FSYmsU-AAod_-OqekqhpNKl0RFfOnyrk/view?usp=sharing) 
-[Post Fire Season ](https://drive.google.com/drive/folders/1KSQIsZ7aS0fptUzmRROhVNC6sdQBi5oT?usp=sharing) 
-[Split Fire Data](https://drive.google.com/drive/folders/1Kz83ldFiT2SoBKCUhME_Y7cIqelQY0Bk?usp=sharing) 
-[Orignal Fire SQL Data](https://drive.google.com/drive/folders/1bHpwrSCP1GqkNrXyZ4Fl3WZNfz-QRVay?usp=sharing) 
+[Pre Fire Season](https://drive.google.com/drive/folders/1Kz83ldFiT2SoBKCUhME_Y7cIqelQY0Bk?usp=share_link) 
+[Biodiversity Data](https://drive.google.com/drive/folders/1CGOuUdZoV8LBLmq1fms3AwvKhutOGaEB?usp=share_link) 
+[Shortened_Data](https://drive.google.com/drive/folders/1KSQIsZ7aS0fptUzmRROhVNC6sdQBi5oT?usp=share_link) 
+[Fire Data](https://drive.google.com/file/d/1FSYmsU-AAod_-OqekqhpNKl0RFfOnyrk/view?usp=share_link) 
+[Post Fire Season ](https://drive.google.com/drive/folders/17Z5gZNE-rXwYgMv9LkP9C7VBF4MZpFGW?usp=share_link) 
+[Split Fire Data](https://drive.google.com/drive/folders/1bHpwrSCP1GqkNrXyZ4Fl3WZNfz-QRVay?usp=share_link) 
+[Orignal Fire SQL Data](https://drive.google.com/drive/folders/1cfsWxUuY4RIGxbJ8WHVoyxXKQcEsaaJY?usp=share_link) 
